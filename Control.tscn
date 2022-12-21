@@ -52,6 +52,12 @@ animation = "idle"
 offset = Vector2( 0, -115 )
 script = ExtResource( 15 )
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+offset = Vector2( 0, -170.443 )
+current = true
+zoom = Vector2( 0.619, 1.005 )
+smoothing_enabled = true
+
 [node name="Environment" type="Node2D" parent="."]
 
 [node name="Bg" type="Sprite" parent="Environment"]

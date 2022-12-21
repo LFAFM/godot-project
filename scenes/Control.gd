@@ -12,6 +12,7 @@ func _input(event):
 		return
 
 	var new_path = nav2D.get_simple_path(Player.get_global_position(), get_global_mouse_position())
+	#var new_path = Navigation2DServer.map_get_path(Player.get_global_position(), get_global_mouse_position())
 
 	line2D.points = new_path
 	

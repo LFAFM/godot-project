@@ -1,10 +1,232 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://ui/inventory/inventory_base.png" type="Texture" id=1]
+[ext_resource path="res://ui/inventory/item_1_default.png" type="Texture" id=2]
+[ext_resource path="res://ui/inventory/button_arrow.png" type="Texture" id=3]
+[ext_resource path="res://ui/inventory/item_2_default.png" type="Texture" id=4]
+[ext_resource path="res://ui/inventory/item_3_default.png" type="Texture" id=5]
+[ext_resource path="res://scripts/ui/InventoryContainer.gd" type="Script" id=6]
+[ext_resource path="res://ui/inventory/menu_closed.png" type="Texture" id=7]
+[ext_resource path="res://scripts/ui/InventoryButton.gd" type="Script" id=8]
+[ext_resource path="res://scripts/ui/Slot.gd" type="Script" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="Theme" id=7]
+HScrollBar/styles/grabber = SubResource( 2 )
+HScrollBar/styles/grabber_highlight = SubResource( 3 )
+HScrollBar/styles/grabber_pressed = SubResource( 4 )
+HScrollBar/styles/scroll = SubResource( 5 )
+HScrollBar/styles/scroll_focus = SubResource( 6 )
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 180, 180 )
 
 [node name="Inventory" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="InventoryButton" type="Button" parent="."]
+margin_left = 1259.0
+margin_top = 105.0
+margin_right = 1783.0
+margin_bottom = 623.0
+custom_styles/focus = SubResource( 12 )
+icon = ExtResource( 7 )
+flat = true
+script = ExtResource( 8 )
+
+[node name="InventoryContainer" type="TextureRect" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 1 )
+script = ExtResource( 6 )
+
+[node name="LeftArrowButton" type="Button" parent="InventoryContainer"]
+margin_left = 8.0
+margin_top = 134.0
+margin_right = 84.0
+margin_bottom = 264.0
+custom_styles/pressed = SubResource( 8 )
+custom_styles/focus = SubResource( 9 )
+icon = ExtResource( 3 )
+flat = true
+
+[node name="RightArrowButton" type="Button" parent="InventoryContainer"]
+margin_left = 1014.0
+margin_top = 134.0
+margin_right = 1090.0
+margin_bottom = 264.0
+rect_scale = Vector2( -1, 1 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+icon = ExtResource( 3 )
+flat = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="InventoryContainer"]
+margin_left = 109.0
+margin_top = 109.0
+margin_right = 915.0
+margin_bottom = 291.0
+theme = SubResource( 7 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InventoryContainer/ScrollContainer"]
+margin_right = 1636.0
+margin_bottom = 180.0
+custom_constants/separation = 28
+
+[node name="Slot" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+margin_right = 180.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 180, 180 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 9 )
+
+[node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot"]
+margin_left = -4.0
+margin_top = -5.0
+margin_right = 186.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 170, 170 )
+texture = ExtResource( 4 )
+
+[node name="Slot2" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+margin_left = 208.0
+margin_right = 388.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 180, 180 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 9 )
+
+[node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot2"]
+margin_left = -4.0
+margin_top = -5.0
+margin_right = 186.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 170, 170 )
+
+[node name="Slot3" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+margin_left = 416.0
+margin_right = 596.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 180, 180 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 9 )
+
+[node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot3"]
+margin_left = -4.0
+margin_top = -5.0
+margin_right = 186.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 170, 170 )
+
+[node name="Slot4" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+margin_left = 624.0
+margin_right = 804.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 180, 180 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 9 )
+
+[node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot4"]
+margin_left = -4.0
+margin_top = -5.0
+margin_right = 186.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 170, 170 )
+
+[node name="Slot5" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+margin_left = 832.0
+margin_right = 1012.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 180, 180 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 9 )
+
+[node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot5"]
+margin_left = -4.0
+margin_top = -5.0
+margin_right = 186.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 170, 170 )
+
+[node name="Slot6" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+margin_left = 1040.0
+margin_right = 1220.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 180, 180 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 9 )
+
+[node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot6"]
+margin_left = -4.0
+margin_top = -5.0
+margin_right = 186.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 170, 170 )
+
+[node name="Slot7" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+margin_left = 1248.0
+margin_right = 1428.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 180, 180 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 9 )
+
+[node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot7"]
+margin_left = -4.0
+margin_top = -5.0
+margin_right = 186.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 170, 170 )
+
+[node name="Slot8" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+margin_left = 1456.0
+margin_right = 1636.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 180, 180 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 9 )
+
+[node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot8"]
+margin_left = -4.0
+margin_top = -5.0
+margin_right = 186.0
+margin_bottom = 185.0
+rect_min_size = Vector2( 170, 170 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="movable_item" type="Node2D" parent="InventoryContainer"]
+
+[node name="Item" type="TextureRect" parent="InventoryContainer/movable_item"]
+margin_right = 190.0
+margin_bottom = 190.0
+rect_min_size = Vector2( 190, 190 )
+expand = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 870, 379 )
+current = true
+zoom = Vector2( 2, 2 )
+
+[connection signal="pressed" from="InventoryButton" to="InventoryContainer" method="_on_InventoryButton_pressed"]
+[connection signal="pressed" from="InventoryContainer/LeftArrowButton" to="InventoryContainer" method="_on_LeftArrowButton_pressed"]
+[connection signal="pressed" from="InventoryContainer/RightArrowButton" to="InventoryContainer" method="_on_RightArrowButton_pressed"]

@@ -85,17 +85,20 @@ margin_left = 109.0
 margin_top = 109.0
 margin_right = 915.0
 margin_bottom = 291.0
+mouse_filter = 2
 theme = SubResource( 7 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="InventoryContainer/ScrollContainer"]
 margin_right = 1636.0
 margin_bottom = 180.0
+mouse_filter = 2
 custom_constants/separation = 28
 
 [node name="Slot" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_right = 180.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
+mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
@@ -105,6 +108,7 @@ margin_top = -5.0
 margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
+mouse_filter = 2
 texture = ExtResource( 4 )
 
 [node name="Slot2" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
@@ -112,6 +116,7 @@ margin_left = 208.0
 margin_right = 388.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
+mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
@@ -121,12 +126,14 @@ margin_top = -5.0
 margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
+mouse_filter = 2
 
 [node name="Slot3" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_left = 416.0
 margin_right = 596.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
+mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
@@ -136,12 +143,14 @@ margin_top = -5.0
 margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
+mouse_filter = 2
 
 [node name="Slot4" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_left = 624.0
 margin_right = 804.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
+mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
@@ -151,12 +160,14 @@ margin_top = -5.0
 margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
+mouse_filter = 2
 
 [node name="Slot5" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_left = 832.0
 margin_right = 1012.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
+mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
@@ -166,12 +177,14 @@ margin_top = -5.0
 margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
+mouse_filter = 2
 
 [node name="Slot6" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_left = 1040.0
 margin_right = 1220.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
+mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
@@ -181,12 +194,14 @@ margin_top = -5.0
 margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
+mouse_filter = 2
 
 [node name="Slot7" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_left = 1248.0
 margin_right = 1428.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
+mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
@@ -196,12 +211,14 @@ margin_top = -5.0
 margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
+mouse_filter = 2
 
 [node name="Slot8" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_left = 1456.0
 margin_right = 1636.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
+mouse_filter = 2
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
@@ -211,10 +228,12 @@ margin_top = -5.0
 margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
+mouse_filter = 2
 texture = ExtResource( 5 )
 expand = true
 
 [node name="movable_item" type="Node2D" parent="InventoryContainer"]
+visible = false
 
 [node name="Item" type="TextureRect" parent="InventoryContainer/movable_item"]
 margin_right = 190.0

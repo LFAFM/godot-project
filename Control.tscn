@@ -1,39 +1,27 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://player/Run-hero01_003.png" type="Texture" id=1]
 [ext_resource path="res://player/Run-hero01_001.png" type="Texture" id=2]
 [ext_resource path="res://player/Run-hero01_002.png" type="Texture" id=3]
-[ext_resource path="res://player/Idle-hero01_009.png" type="Texture" id=4]
-[ext_resource path="res://player/Idle-hero01_008.png" type="Texture" id=5]
-[ext_resource path="res://player/Idle-hero01_012.png" type="Texture" id=6]
 [ext_resource path="res://player/Run-hero01_005.png" type="Texture" id=7]
-[ext_resource path="res://player/Run-hero01_007.png" type="Texture" id=8]
-[ext_resource path="res://player/Idle-hero01_007.png" type="Texture" id=9]
 [ext_resource path="res://player/Run-hero01_004.png" type="Texture" id=10]
-[ext_resource path="res://player/Idle-hero01_006.png" type="Texture" id=11]
-[ext_resource path="res://player/Idle-hero01_011.png" type="Texture" id=12]
-[ext_resource path="res://player/Run-hero01_006.png" type="Texture" id=13]
-[ext_resource path="res://player/Idle-hero01_010.png" type="Texture" id=14]
 [ext_resource path="res://scripts/Player_Motion.gd" type="Script" id=15]
 [ext_resource path="res://scenes/Control.gd" type="Script" id=16]
-[ext_resource path="res://player/Idle-hero01_004.png" type="Texture" id=17]
 [ext_resource path="res://player/Idle-hero01_002.png" type="Texture" id=18]
-[ext_resource path="res://player/Idle-hero01_005.png" type="Texture" id=19]
 [ext_resource path="res://environment/BG.png" type="Texture" id=20]
 [ext_resource path="res://player/Idle-hero01_001.png" type="Texture" id=21]
-[ext_resource path="res://player/Idle-hero01_003.png" type="Texture" id=22]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 21 ), ExtResource( 18 ), ExtResource( 22 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 14 ), ExtResource( 12 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 21 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "idle",
-"speed": 6.0
+"speed": 2.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 10 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "move",
-"speed": 6.0
+"speed": 7.0
 } ]
 
 [sub_resource type="NavigationPolygon" id=2]
@@ -45,17 +33,18 @@ outlines = [ PoolVector2Array( 138, 589, 254, 426, 330, 427, 340, 453, 378, 453,
 script = ExtResource( 16 )
 
 [node name="Player" type="AnimatedSprite" parent="."]
-position = Vector2( 638, 472 )
+position = Vector2( 667, 477 )
+scale = Vector2( 0.159231, 0.159231 )
 z_index = 1
 frames = SubResource( 1 )
 animation = "idle"
-offset = Vector2( 0, -115 )
+offset = Vector2( 0, -740 )
 script = ExtResource( 15 )
+speed = 300
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2( 0, -170.443 )
 current = true
-zoom = Vector2( 0.619, 1.005 )
 smoothing_enabled = true
 
 [node name="Environment" type="Node2D" parent="."]
@@ -67,6 +56,7 @@ texture = ExtResource( 20 )
 
 [node name="Line2D" type="Line2D" parent="."]
 z_index = 1
+width = 5.0
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 

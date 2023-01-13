@@ -66,6 +66,7 @@ func activateSlots(var slot):
 			
 
 func _on_LeftArrowButton_pressed():
+	print("tanto faz")
 	var value = scrollContainer.get_h_scroll()
 	scrollContainer.set_h_scroll(value - 200)
 

@@ -47,6 +47,18 @@ offset = Vector2( 0, -170.443 )
 current = true
 smoothing_enabled = true
 
+[node name="Control" type="Control" parent="Player/Camera2D"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Player/Camera2D/Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="Player/Camera2D/Control/Panel"]
+margin_right = 40.0
+margin_bottom = 14.0
+
 [node name="Environment" type="Node2D" parent="."]
 
 [node name="Bg" type="Sprite" parent="Environment"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://player/Run-hero01_003.png" type="Texture" id=1]
 [ext_resource path="res://player/Run-hero01_001.png" type="Texture" id=2]
 [ext_resource path="res://player/Run-hero01_002.png" type="Texture" id=3]
+[ext_resource path="res://ui/infocard/InfoCard.tscn" type="PackedScene" id=4]
 [ext_resource path="res://player/Run-hero01_005.png" type="Texture" id=7]
 [ext_resource path="res://player/Run-hero01_004.png" type="Texture" id=10]
 [ext_resource path="res://scripts/Player_Motion.gd" type="Script" id=15]
@@ -44,7 +45,6 @@ speed = 300
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2( 0, -170.443 )
-current = true
 smoothing_enabled = true
 
 [node name="Control" type="Control" parent="Player/Camera2D"]
@@ -74,3 +74,7 @@ width = 5.0
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
 navpoly = SubResource( 2 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="InfoCard" parent="UI" instance=ExtResource( 4 )]

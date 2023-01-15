@@ -1,6 +1,5 @@
 extends Panel
 
-
 var item : TextureRect = null;
 
 var default_texture = preload("res://ui/inventory/inventory_slot.png")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "flip",
+"speed": 5.0
+} ]
+
+[node name="CardInfo" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "flip"

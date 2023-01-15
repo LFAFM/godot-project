@@ -49,6 +49,7 @@ margin_top = 105.0
 margin_right = 1783.0
 margin_bottom = 623.0
 custom_styles/focus = SubResource( 12 )
+toggle_mode = true
 icon = ExtResource( 7 )
 flat = true
 script = ExtResource( 8 )
@@ -81,10 +82,10 @@ icon = ExtResource( 3 )
 flat = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="InventoryContainer"]
-margin_left = 109.0
-margin_top = 109.0
+margin_left = 110.0
+margin_top = 110.0
 margin_right = 915.0
-margin_bottom = 291.0
+margin_bottom = 290.0
 mouse_filter = 2
 theme = SubResource( 7 )
 
@@ -103,11 +104,9 @@ custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
 [node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot"]
-margin_left = -4.0
-margin_top = -5.0
-margin_right = 186.0
-margin_bottom = 185.0
-rect_min_size = Vector2( 170, 170 )
+margin_right = 188.0
+margin_bottom = 190.0
+rect_min_size = Vector2( 120, 120 )
 mouse_filter = 2
 texture = ExtResource( 4 )
 
@@ -236,8 +235,10 @@ expand = true
 visible = false
 
 [node name="Item" type="TextureRect" parent="InventoryContainer/movable_item"]
+visible = false
+margin_top = -2.0
 margin_right = 190.0
-margin_bottom = 190.0
+margin_bottom = 188.0
 rect_min_size = Vector2( 190, 190 )
 expand = true
 

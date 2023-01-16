@@ -44,21 +44,28 @@ region_rect = Rect2( 0, 0, 180, 180 )
 [node name="Inventory" type="Node2D"]
 
 [node name="InventoryButton" type="Button" parent="."]
-margin_left = 1259.0
-margin_top = 105.0
-margin_right = 1783.0
-margin_bottom = 623.0
+margin_left = 1063.0
+margin_top = -41.0
+margin_right = 1587.0
+margin_bottom = 477.0
 custom_styles/focus = SubResource( 12 )
 toggle_mode = true
 icon = ExtResource( 7 )
 flat = true
 script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="InventoryContainer" type="TextureRect" parent="."]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 1 )
 script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="LeftArrowButton" type="Button" parent="InventoryContainer"]
 margin_left = 8.0
@@ -244,7 +251,6 @@ expand = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 870, 379 )
-current = true
 zoom = Vector2( 2, 2 )
 
 [connection signal="pressed" from="InventoryButton" to="InventoryContainer" method="_on_InventoryButton_pressed"]

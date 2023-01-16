@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Honey Silk.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menu.gd" type="Script" id=2]
 [ext_resource path="res://Control.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/buttons/Quit_Button.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Options.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 45
@@ -85,6 +87,7 @@ custom_constants/margin_left = 50
 margin_left = 50.0
 margin_right = 602.0
 margin_bottom = 57.0
+focus_neighbour_top = NodePath("../../MarginContainer3/Quit_Button")
 focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -92,7 +95,7 @@ custom_fonts/font = SubResource( 2 )
 custom_styles/hover = SubResource( 3 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
-text = "New Game"
+text = "Start"
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 margin_top = 77.0
@@ -103,18 +106,7 @@ size_flags_vertical = 3
 custom_constants/margin_right = 50
 custom_constants/margin_left = 50
 
-[node name="Options_Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2"]
-margin_left = 50.0
-margin_right = 602.0
-margin_bottom = 57.0
-focus_mode = 0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_fonts/font = SubResource( 2 )
-custom_styles/hover = SubResource( 3 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
-text = "Options"
+[node name="Options_Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2" instance=ExtResource( 5 )]
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 margin_top = 154.0
@@ -129,6 +121,7 @@ custom_constants/margin_left = 50
 margin_left = 50.0
 margin_right = 602.0
 margin_bottom = 57.0
+focus_neighbour_bottom = NodePath("../../MarginContainer/NewGame_Button")
 focus_mode = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -137,5 +130,7 @@ custom_styles/hover = SubResource( 3 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 text = "Quit"
+script = ExtResource( 4 )
 
 [connection signal="button_up" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/NewGame_Button" to="." method="_on_NewGame_Button_button_up"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3/Quit_Button" to="." method="_on_Quit_Button_pressed"]

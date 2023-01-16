@@ -115,4 +115,4 @@ func change_state(newState):
 		INTERACT:
 			interactable_object.interact()
 			self.play("interact")
-			print("interact, yeayyy!")
+			print("interact, credous!")

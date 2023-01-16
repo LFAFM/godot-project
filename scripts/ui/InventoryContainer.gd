@@ -54,7 +54,7 @@ func slot_gui_input(event: InputEvent, slot: SlotClass):
 					
 func _input(event):
 	if(movable_item.visible):
-		movable_item.global_position = get_global_mouse_position() + Vector2(-60, -60)
+		movable_item.global_position = get_global_mouse_position() # Vector2(-60, -60)
 
 func activateSlots(var slot):
 	for h_slot in scrollContainer.get_node("HBoxContainer").get_children():

@@ -1,12 +1,16 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://player/Run-hero01_003.png" type="Texture" id=1]
 [ext_resource path="res://player/Run-hero01_001.png" type="Texture" id=2]
 [ext_resource path="res://player/Run-hero01_002.png" type="Texture" id=3]
 [ext_resource path="res://scenes/Inventory.tscn" type="PackedScene" id=4]
 [ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://scripts/interactions/InteractionPickUp.gd" type="Script" id=6]
 [ext_resource path="res://player/Run-hero01_005.png" type="Texture" id=7]
+[ext_resource path="res://scenes/animations/item_interact.tres" type="Animation" id=8]
+[ext_resource path="res://scripts/interactions/InteractionPickUp_SweatyPants.gd" type="Script" id=9]
 [ext_resource path="res://player/Run-hero01_004.png" type="Texture" id=10]
+[ext_resource path="res://scripts/interactions/interaction_solver/Interaction_Solver.gd" type="Script" id=11]
 [ext_resource path="res://scripts/Player_Motion.gd" type="Script" id=15]
 [ext_resource path="res://scenes/Control.gd" type="Script" id=16]
 [ext_resource path="res://player/Idle-hero01_002.png" type="Texture" id=18]
@@ -17,17 +21,17 @@
 animations = [ {
 "frames": [ ExtResource( 21 ), ExtResource( 18 ) ],
 "loop": true,
-"name": "idle",
+"name": "idle_1_1_1_1_1",
 "speed": 2.0
 }, {
 "frames": [ ExtResource( 21 ) ],
 "loop": true,
-"name": "interact",
+"name": "interact_1_1_1_1_1",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 10 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "move",
+"name": "move_1_1_1_1_1",
 "speed": 7.0
 } ]
 
@@ -78,7 +82,49 @@ tracks/2/keys = {
 "values": [ Vector2( 0.625, 0.625 ) ]
 }
 
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 20, 20 )
+
 [sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.625, 0.625 ) ]
+}
+
+[sub_resource type="Animation" id=6]
 resource_name = "interact"
 length = 1.6
 step = 3.003
@@ -127,7 +173,7 @@ position = Vector2( 667, 477 )
 scale = Vector2( 0.159231, 0.159231 )
 z_index = 1
 frames = SubResource( 1 )
-animation = "interact"
+animation = "interact_1_1_1_1_1"
 offset = Vector2( 0, -740 )
 script = ExtResource( 15 )
 speed = 300
@@ -174,10 +220,12 @@ z_index = 4
 z_as_relative = false
 
 [node name="InteractionsObjects" type="Area2D" parent="."]
+script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionsObjects"]
 position = Vector2( 1034, 340 )
 shape = SubResource( 3 )
+script = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="InteractionsObjects/CollisionShape2D"]
 scale = Vector2( 0.625, 0.625 )
@@ -185,9 +233,27 @@ texture = ExtResource( 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="InteractionsObjects/CollisionShape2D/Sprite"]
 anims/RESET = SubResource( 4 )
-anims/interact = SubResource( 5 )
+anims/interact = ExtResource( 8 )
 
 [node name="Position2D" type="Position2D" parent="InteractionsObjects/CollisionShape2D"]
-position = Vector2( 60, 86 )
+position = Vector2( 60, 93 )
 
-[connection signal="input_event" from="InteractionsObjects" to="." method="_on_InteractionsObjects_input_event"]
+[node name="InteractionsObjects2" type="Area2D" parent="."]
+position = Vector2( -726, 91 )
+script = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionsObjects2"]
+position = Vector2( 1034, 340 )
+shape = SubResource( 7 )
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="InteractionsObjects2/CollisionShape2D"]
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InteractionsObjects2/CollisionShape2D/Sprite"]
+anims/RESET = SubResource( 5 )
+anims/interact = SubResource( 6 )
+
+[node name="Position2D" type="Position2D" parent="InteractionsObjects2/CollisionShape2D"]
+position = Vector2( 39, 15 )

@@ -15,6 +15,6 @@ var Inventory
 func interact():
 	set_z_index(5)
 	get_node("Sprite/AnimationPlayer").play("interact")
-	player_state.set_modulate(Color.black) # play_state.("interact")
+	player_state.set_modulate(Color.green) # play_state.("interact")
 	yield(get_node("Sprite/AnimationPlayer"),"animation_finished")
 	get_parent().queue_free()

@@ -12,9 +12,16 @@ var path : PoolVector2Array
 
 export var speed = 250
 
-enum{IDLE, MOVE, CLIMB, INTERACT}
+# ENUMERADO E ESTADOS DO JOGADOR
+enum KSTATE{IDLE, MOVE, CLIMB, INTERACT} # IDLE
+var has_sweaty_panties : bool = false # 1º OBJ [true = 1; false = 0]
+var has_glasses : bool = false  # 2º OBJ [true = 1; false = 0]
+var has_pants : bool = false # 3º OBJ [true = 1; false = 0]
+var has_shirt : bool = false # 4º OBJ [true = 1; false = 0]
+var has_tshirt : bool = false # 5º OBJ [true = 1; false = 0]
 
-var state = IDLE
+
+var state = KSTATE.IDLE
 
 var is_going_to_interact : bool
 var interactable_object 
@@ -26,6 +33,12 @@ var margin = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	has_sweaty_panties = true
+	has_glasses = true
+	has_pants = true
+	has_shirt = true
+	has_tshirt = true
+	change_state(KSTATE.IDLE)
 	destination = position
 	is_climbing = false
 
@@ -34,13 +47,13 @@ func _process(delta):
 	var move_distance = speed * delta 
 	
 	match state:
-		IDLE:
+		KSTATE.IDLE:
 			pass
-		MOVE:
+		KSTATE.MOVE:
 			move_along_path(move_distance)
-		CLIMB:
+		KSTATE.CLIMB:
 			climb_along_path(move_distance)
-		INTERACT:
+		KSTATE.INTERACT:
 			interact(delta)
 	pass
 	
@@ -48,7 +61,7 @@ func move_along_path(distance):
 	var starting_point : = position 
 	
 	if(is_climbing):
-		change_state(CLIMB)
+		change_state(KSTATE.CLIMB)
 	
 	if(starting_point.x < path[0].x):
 		self.set_flip_h( false )
@@ -66,9 +79,9 @@ func move_along_path(distance):
 		
 		if(path.size() == 0):
 			if(is_going_to_interact):
-				change_state(INTERACT)
+				change_state(KSTATE.INTERACT)
 			else:
-				change_state(IDLE)			
+				change_state(KSTATE.IDLE)			
 	pass
 	
 func climb_along_path(distance):
@@ -80,7 +93,7 @@ func climb_along_path(distance):
 		self.play("climb", true)
 		
 	if(!is_climbing):
-		change_state(MOVE)
+		change_state(KSTATE.MOVE)
 	
 	for i in range(path.size()):
 		var distance_to_next : = starting_point.distance_to(path[0])
@@ -92,27 +105,37 @@ func climb_along_path(distance):
 		path.remove(0)
 		
 		if(path.size() == 0):
-			change_state(IDLE)			
+			change_state(KSTATE.IDLE)			
 	pass
 	
 func interact(delta):
 	interaction_timer -= delta
 	if(interaction_timer <= 0):
-		change_state(IDLE)
+		change_state(KSTATE.IDLE)
 		interaction_timer = 1
 
 	
 func change_state(newState):
 	state = newState
 	match state: 
-		IDLE:
+		KSTATE.IDLE:
 			if(!is_climbing):
-				self.play("idle")
+				print(KSTATE.keys()[state].to_lower())
+				self.play("%s_%s_%s_%s_%s_%s" % [
+					KSTATE.keys()[state].to_lower(),
+					int(has_sweaty_panties), int(has_glasses), int(has_pants), int(has_shirt), int(has_tshirt)
+				]) # falta definir 3 variáveis 
 			if(is_climbing):
 				self.play("climb_idle")
-		MOVE:
-			self.play("move")
-		INTERACT:
+		KSTATE.MOVE:
+				self.play("%s_%s_%s_%s_%s_%s" % [
+					KSTATE.keys()[state].to_lower(),
+					int(has_sweaty_panties), int(has_glasses), int(has_pants), int(has_shirt), int(has_tshirt)
+				])
+		KSTATE.INTERACT:
 			interactable_object.interact()
-			self.play("interact")
+			self.play("%s_%s_%s_%s_%s_%s" % [
+				KSTATE.keys()[state].to_lower(),
+				int(has_sweaty_panties), int(has_glasses), int(has_pants), int(has_shirt), int(has_tshirt)
+			])
 			print("interact, credous!")

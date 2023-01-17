@@ -6,7 +6,7 @@ onready var Player : AnimatedSprite = get_node("../Player")
 func _ready():
 	connect("input_event", self,"_on_InteractionsObjects_input_event")
 
-func _on_InteractionsObjects_input_event(object, event, shape_idx):
+func _on_InteractionsObjects_input_event(_object, _event, shape_idx):
 	if !Input.is_action_pressed("ui_leftMouseClick"):
 		return
 	get_tree().set_input_as_handled()

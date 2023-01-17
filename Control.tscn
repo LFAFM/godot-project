@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://player/Run-hero01_003.png" type="Texture" id=1]
 [ext_resource path="res://player/Run-hero01_001.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://scripts/interactions/InteractionPickUp_SweatyPants.gd" type="Script" id=9]
 [ext_resource path="res://player/Run-hero01_004.png" type="Texture" id=10]
 [ext_resource path="res://scripts/interactions/interaction_solver/Interaction_Solver.gd" type="Script" id=11]
+[ext_resource path="res://scripts/interactions/InteractionPickUp_Anita.gd" type="Script" id=12]
 [ext_resource path="res://scripts/Player_Motion.gd" type="Script" id=15]
 [ext_resource path="res://scenes/Control.gd" type="Script" id=16]
 [ext_resource path="res://player/Idle-hero01_002.png" type="Texture" id=18]
@@ -34,6 +35,41 @@ animations = [ {
 "name": "move_1_1_1_1_1",
 "speed": 7.0
 } ]
+
+[sub_resource type="Shader" id=10]
+code = "shader_type canvas_item;
+
+uniform float speed = 2.0;
+uniform float waves = 1.0;
+uniform float blur = 1;
+uniform int drunkness = 1;
+
+float Remap01(float value, float from, float to) {
+    return (value - from) / (to - from);
+}
+
+void fragment() {
+    vec2 uv = SCREEN_UV;
+    uv.x += Remap01(sin(uv.y * waves - (TIME * speed)), -waves, waves) - 0.5;
+	uv.y += Remap01(sin(uv.x * waves - (TIME * speed)), -waves, waves) - 0.5;
+	
+    vec4 color = textureLod(SCREEN_TEXTURE, uv, blur);
+
+	COLOR =  color;
+	color.x = float(int(COLOR.x * 255.0) % drunkness) / 255.0 * 5.0 * sin(TIME * 0.3) * 1.0;
+	color.x *= color.x;
+	COLOR *= color * 0.5;
+}"
+
+[sub_resource type="ShaderMaterial" id=11]
+shader = SubResource( 10 )
+shader_param/speed = 0.4
+shader_param/waves = 40.0
+shader_param/blur = 0.7
+shader_param/drunkness = 100
+
+[sub_resource type="ImageTexture" id=12]
+size = Vector2( 1048, 600 )
 
 [sub_resource type="NavigationPolygon" id=2]
 vertices = PoolVector2Array( 1586, 543, 1624, 591, 505, 589, 513, 567, 776, 522, 1075, 510, 1392, 524, 488, 565, 484, 586, 138, 589, 254, 426, 340, 453, 1059, 440, 1075, 440, 1135, 481, 532, 513, 559, 442, 768, 443, 1078, 426, 1129, 426, 378, 453, 384, 424, 438, 421, 507, 513, 330, 427, 1307, 462, 1494, 499, 1507, 505 )
@@ -165,6 +201,86 @@ tracks/2/keys = {
 "values": [ Vector2( 0.625, 0.625 ), Vector2( 0.525, 0.525 ), Vector2( 0.825, 0.825 ), Vector2( 0.625, 0.625 ) ]
 }
 
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.625, 0.625 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "interact"
+length = 1.6
+step = 3.003
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.3, 0.5, 1.2 ),
+"transitions": PoolRealArray( 1, 2.21914, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -10.0, 10.0, -10.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 3.73214, 0.392291 ),
+"update": 0,
+"values": [ Vector2( 0.625, 0.625 ), Vector2( 0.525, 0.525 ), Vector2( 0.825, 0.825 ), Vector2( 0.625, 0.625 ) ]
+}
+
 [node name="Control" type="Node2D"]
 script = ExtResource( 16 )
 
@@ -195,6 +311,17 @@ margin_bottom = 40.0
 margin_right = 40.0
 margin_bottom = 14.0
 
+[node name="ShaderDrunk" type="TextureRect" parent="Player/Camera2D"]
+visible = false
+material = SubResource( 11 )
+margin_left = -5696.0
+margin_top = -3837.0
+margin_right = 10000.0
+margin_bottom = 10000.0
+mouse_filter = 2
+texture = SubResource( 12 )
+expand = true
+
 [node name="Environment" type="Node2D" parent="."]
 
 [node name="Bg" type="Sprite" parent="Environment"]
@@ -219,41 +346,61 @@ scale = Vector2( 0.3, 0.3 )
 z_index = 4
 z_as_relative = false
 
-[node name="InteractionsObjects" type="Area2D" parent="."]
+[node name="InteractionsObjects_PickUp_Inventory" type="Area2D" parent="."]
 script = ExtResource( 11 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionsObjects"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionsObjects_PickUp_Inventory"]
 position = Vector2( 1034, 340 )
 shape = SubResource( 3 )
 script = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="InteractionsObjects/CollisionShape2D"]
+[node name="Sprite" type="Sprite" parent="InteractionsObjects_PickUp_Inventory/CollisionShape2D"]
 scale = Vector2( 0.625, 0.625 )
 texture = ExtResource( 5 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="InteractionsObjects/CollisionShape2D/Sprite"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InteractionsObjects_PickUp_Inventory/CollisionShape2D/Sprite"]
 anims/RESET = SubResource( 4 )
 anims/interact = ExtResource( 8 )
 
-[node name="Position2D" type="Position2D" parent="InteractionsObjects/CollisionShape2D"]
+[node name="Position2D" type="Position2D" parent="InteractionsObjects_PickUp_Inventory/CollisionShape2D"]
 position = Vector2( 60, 93 )
 
-[node name="InteractionsObjects2" type="Area2D" parent="."]
+[node name="InteractionsObjects_PickUp_Clothes" type="Area2D" parent="."]
 position = Vector2( -726, 91 )
 script = ExtResource( 11 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionsObjects2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionsObjects_PickUp_Clothes"]
 position = Vector2( 1034, 340 )
 shape = SubResource( 7 )
 script = ExtResource( 9 )
 
-[node name="Sprite" type="Sprite" parent="InteractionsObjects2/CollisionShape2D"]
+[node name="Sprite" type="Sprite" parent="InteractionsObjects_PickUp_Clothes/CollisionShape2D"]
 scale = Vector2( 0.625, 0.625 )
 texture = ExtResource( 5 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="InteractionsObjects2/CollisionShape2D/Sprite"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InteractionsObjects_PickUp_Clothes/CollisionShape2D/Sprite"]
 anims/RESET = SubResource( 5 )
 anims/interact = SubResource( 6 )
 
-[node name="Position2D" type="Position2D" parent="InteractionsObjects2/CollisionShape2D"]
+[node name="Position2D" type="Position2D" parent="InteractionsObjects_PickUp_Clothes/CollisionShape2D"]
 position = Vector2( 39, 15 )
+
+[node name="InteractionsObjects_PickUp_Anita" type="Area2D" parent="."]
+position = Vector2( 255, 190 )
+script = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionsObjects_PickUp_Anita"]
+position = Vector2( 1034, 340 )
+shape = SubResource( 7 )
+script = ExtResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="InteractionsObjects_PickUp_Anita/CollisionShape2D"]
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InteractionsObjects_PickUp_Anita/CollisionShape2D/Sprite"]
+anims/RESET = SubResource( 8 )
+anims/interact = SubResource( 9 )
+
+[node name="Position2D" type="Position2D" parent="InteractionsObjects_PickUp_Anita/CollisionShape2D"]
+position = Vector2( -32, 19 )

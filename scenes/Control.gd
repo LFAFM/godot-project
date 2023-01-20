@@ -7,6 +7,10 @@ onready var nav2D : Navigation2D = $Navigation2D
 onready var line2D : Line2D = $Line2D
 onready var Player : AnimatedSprite = $Player
 
+# expressões para audio
+# onready var global_audio_player = $"../../ambientplayer
+# onready var sfx_audio_player = $"../../ambientplayer
+
 func _unhandled_input(event):
 	if(!(event is InputEventMouseButton) || !event.is_pressed()):
 		return

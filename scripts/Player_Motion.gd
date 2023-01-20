@@ -82,7 +82,12 @@ func move_along_path(distance):
 				change_state(KSTATE.INTERACT)
 			else:
 				change_state(KSTATE.IDLE)			
-	pass
+		pass
+		
+	if Input.is_action_pressed("slow_mo"):
+		Engine.time_scale = 0.1
+	else:
+		Engine.time_scale = 1.0
 	
 func climb_along_path(distance):
 	var starting_point : = position 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://player/Run-hero01_003.png" type="Texture" id=1]
 [ext_resource path="res://player/Run-hero01_001.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://player/Run-hero01_004.png" type="Texture" id=10]
 [ext_resource path="res://scripts/interactions/interaction_solver/Interaction_Solver.gd" type="Script" id=11]
 [ext_resource path="res://scripts/interactions/InteractionPickUp_Anita.gd" type="Script" id=12]
+[ext_resource path="res://audio/background_audio.wav" type="AudioStream" id=13]
 [ext_resource path="res://scripts/Player_Motion.gd" type="Script" id=15]
 [ext_resource path="res://scenes/Control.gd" type="Script" id=16]
 [ext_resource path="res://player/Idle-hero01_002.png" type="Texture" id=18]
@@ -404,3 +405,7 @@ anims/interact = SubResource( 9 )
 
 [node name="Position2D" type="Position2D" parent="InteractionsObjects_PickUp_Anita/CollisionShape2D"]
 position = Vector2( -32, 19 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 13 )
+autoplay = true

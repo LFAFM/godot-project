@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="LevelComplete" type="Sprite"]
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]

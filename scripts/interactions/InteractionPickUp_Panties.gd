@@ -19,9 +19,3 @@ func interact():
 	player_state.set_modulate(Color.green) # play_state.("interact")
 	yield(get_node("Sprite/AnimationPlayer"),"animation_finished")
 	get_parent().queue_free()
-
-func start_slowmo():
-	Engine.time_scale = slowmo_time_scale
-	
-func end_slowmo():
-	Engine.time_scale = normal_time_scale

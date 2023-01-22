@@ -1,14 +1,12 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://ui/inventory/inventory_base.png" type="Texture" id=1]
-[ext_resource path="res://ui/inventory/item_1_default.png" type="Texture" id=2]
+[ext_resource path="res://ui/inventory/item_inventory_off.png" type="Texture" id=2]
 [ext_resource path="res://ui/inventory/button_arrow.png" type="Texture" id=3]
-[ext_resource path="res://ui/inventory/item_2_default.png" type="Texture" id=4]
-[ext_resource path="res://ui/inventory/item_3_default.png" type="Texture" id=5]
 [ext_resource path="res://scripts/ui/InventoryContainer.gd" type="Script" id=6]
-[ext_resource path="res://ui/inventory/menu_closed.png" type="Texture" id=7]
 [ext_resource path="res://scripts/ui/InventoryButton.gd" type="Script" id=8]
 [ext_resource path="res://scripts/ui/Slot.gd" type="Script" id=9]
+[ext_resource path="res://scripts/ui/InventoryManager.gd" type="Script" id=10]
 
 [sub_resource type="StyleBoxEmpty" id=12]
 
@@ -37,21 +35,20 @@ HScrollBar/styles/grabber_pressed = SubResource( 4 )
 HScrollBar/styles/scroll = SubResource( 5 )
 HScrollBar/styles/scroll_focus = SubResource( 6 )
 
-[sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 2 )
-region_rect = Rect2( 0, 0, 180, 180 )
-
 [node name="Inventory" type="Node2D"]
+script = ExtResource( 10 )
 
 [node name="InventoryButton" type="Button" parent="."]
 margin_left = 1063.0
-margin_top = -41.0
+margin_top = -72.0
 margin_right = 1587.0
-margin_bottom = 477.0
+margin_bottom = 446.0
 custom_styles/focus = SubResource( 12 )
 toggle_mode = true
-icon = ExtResource( 7 )
+icon = ExtResource( 2 )
 flat = true
+icon_align = 1
+expand_icon = true
 script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": true
@@ -102,12 +99,10 @@ margin_bottom = 180.0
 mouse_filter = 2
 custom_constants/separation = 28
 
-[node name="Slot" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+[node name="Slot" type="Button" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_right = 180.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
-mouse_filter = 2
-custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
 [node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot"]
@@ -115,15 +110,15 @@ margin_right = 188.0
 margin_bottom = 190.0
 rect_min_size = Vector2( 120, 120 )
 mouse_filter = 2
-texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
 
-[node name="Slot2" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+[node name="Slot2" type="Button" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_left = 208.0
 margin_right = 388.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
 mouse_filter = 2
-custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
 [node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot2"]
@@ -133,14 +128,15 @@ margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
 mouse_filter = 2
+expand = true
+stretch_mode = 6
 
-[node name="Slot3" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+[node name="Slot3" type="Button" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_left = 416.0
 margin_right = 596.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
 mouse_filter = 2
-custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
 [node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot3"]
@@ -150,14 +146,15 @@ margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
 mouse_filter = 2
+expand = true
+stretch_mode = 6
 
-[node name="Slot4" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+[node name="Slot4" type="Button" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_left = 624.0
 margin_right = 804.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
 mouse_filter = 2
-custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
 [node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot4"]
@@ -167,14 +164,15 @@ margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
 mouse_filter = 2
+expand = true
+stretch_mode = 6
 
-[node name="Slot5" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+[node name="Slot5" type="Button" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_left = 832.0
 margin_right = 1012.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
 mouse_filter = 2
-custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
 [node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot5"]
@@ -184,14 +182,15 @@ margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
 mouse_filter = 2
+expand = true
+stretch_mode = 6
 
-[node name="Slot6" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+[node name="Slot6" type="Button" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_left = 1040.0
 margin_right = 1220.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
 mouse_filter = 2
-custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
 [node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot6"]
@@ -201,14 +200,15 @@ margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
 mouse_filter = 2
+expand = true
+stretch_mode = 6
 
-[node name="Slot7" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+[node name="Slot7" type="Button" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_left = 1248.0
 margin_right = 1428.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
 mouse_filter = 2
-custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
 [node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot7"]
@@ -218,14 +218,15 @@ margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
 mouse_filter = 2
+expand = true
+stretch_mode = 6
 
-[node name="Slot8" type="Panel" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
+[node name="Slot8" type="Button" parent="InventoryContainer/ScrollContainer/HBoxContainer"]
 margin_left = 1456.0
 margin_right = 1636.0
 margin_bottom = 180.0
 rect_min_size = Vector2( 180, 180 )
 mouse_filter = 2
-custom_styles/panel = SubResource( 1 )
 script = ExtResource( 9 )
 
 [node name="Item" type="TextureRect" parent="InventoryContainer/ScrollContainer/HBoxContainer/Slot8"]
@@ -235,8 +236,8 @@ margin_right = 186.0
 margin_bottom = 185.0
 rect_min_size = Vector2( 170, 170 )
 mouse_filter = 2
-texture = ExtResource( 5 )
 expand = true
+stretch_mode = 6
 
 [node name="movable_item" type="Node2D" parent="InventoryContainer"]
 visible = false

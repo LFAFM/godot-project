@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/menu_closed.png-2fe47f5112bbacb85fec647226a69a9f.stex"
+path="res://.import/item_icon_panties.png-52e014f75c535bac262ec7b32836a0f8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/inventory/menu_closed.png"
-dest_files=[ "res://.import/menu_closed.png-2fe47f5112bbacb85fec647226a69a9f.stex" ]
+source_file="res://ui/inventory/item_64x64/item_icon_panties.png"
+dest_files=[ "res://.import/item_icon_panties.png-52e014f75c535bac262ec7b32836a0f8.stex" ]
 
 [params]
 

@@ -1,0 +1,33 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float speed = 2.0;
+uniform float waves = 1.0;
+uniform float blur = 1;
+uniform int drunkness = 1;
+
+float Remap01(float value, float from, float to) {
+    return (value - from) / (to - from);
+}
+
+void fragment() {
+    vec2 uv = SCREEN_UV;
+    uv.x += Remap01(sin(uv.y * waves - (TIME * speed)), -waves, waves) - 0.5;
+	uv.y += Remap01(sin(uv.x * waves - (TIME * speed)), -waves, waves) - 0.5;
+	
+    vec4 color = textureLod(SCREEN_TEXTURE, uv, blur);
+
+	COLOR =  color;
+	color.x = float(int(COLOR.x * 255.0) % drunkness) / 255.0 * 5.0 * sin(TIME * 0.3) * 1.0;
+	color.x *= color.x;
+	COLOR *= color * 0.5;
+}"
+
+[resource]
+shader = SubResource( 1 )
+shader_param/speed = 0.4
+shader_param/waves = 40.0
+shader_param/blur = 0.7
+shader_param/drunkness = 100

@@ -30,7 +30,6 @@ var interaction_timer = 1
 var margin = 1
 
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	has_sweaty_panties = true
@@ -81,13 +80,8 @@ func move_along_path(distance):
 			if(is_going_to_interact):
 				change_state(KSTATE.INTERACT)
 			else:
-				change_state(KSTATE.IDLE)			
+				change_state(KSTATE.IDLE)
 		pass
-		
-	if Input.is_action_pressed("slow_mo"):
-		Engine.time_scale = 0.1
-	else:
-		Engine.time_scale = 1.0
 	
 func climb_along_path(distance):
 	var starting_point : = position 

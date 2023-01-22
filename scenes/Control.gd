@@ -6,6 +6,8 @@ enum{IDLE, MOVE, CLIMB, INTERACT}
 onready var nav2D : Navigation2D = $Navigation2D	
 onready var line2D : Line2D = $Line2D
 onready var Player : AnimatedSprite = $Player
+onready var Inventory 
+export var list_of_levels = []
 
 # expressões para audio
 # onready var global_audio_player = $"../../ambientplayer
@@ -23,5 +25,5 @@ func _unhandled_input(event):
 
 	Player.path = new_path
 	Player.is_going_to_interact = false
-
+	
 	Player.change_state(MOVE)

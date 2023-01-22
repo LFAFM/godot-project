@@ -11,9 +11,9 @@ var place_item : bool = false
 var timer = 0.1 
 onready var movable_item : Node2D = $movable_item
 
-func _ready():
-	for h_slot in scrollContainer.get_node("HBoxContainer").get_children():
-		h_slot.connect("gui_input", self, "slot_gui_input", [h_slot])
+#func _ready():
+#	for h_slot in scrollContainer.get_node("HBoxContainer").get_children():
+#		h_slot.connect("gui_input", self, "slot_gui_input", [h_slot])
 		
 func _process(delta):
 	if(place_item):
@@ -62,8 +62,6 @@ func activateSlots(var slot):
 			h_slot.toggleActivation(true)
 		else:
 			h_slot.toggleActivation(false)
-			
-			
 
 func _on_LeftArrowButton_pressed():
 	print("tanto faz")

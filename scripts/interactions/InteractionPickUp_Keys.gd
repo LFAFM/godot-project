@@ -10,7 +10,7 @@ var interaction_type = "pickUp"
 onready var texture = get_node("Sprite").get_texture()
 export var RIGHT : bool
 onready var Inventory = get_node("../../UI/Inventory")
-onready var item_audio_player = $"../item_sound"
+onready var item_audio_player = $"../item_keys_sound"
 
 
 func interact():

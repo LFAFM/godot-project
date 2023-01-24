@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=91 format=2]
 
 [ext_resource path="res://player/Run-hero01_003.png" type="Texture" id=1]
 [ext_resource path="res://player/Run-hero01_001.png" type="Texture" id=2]
@@ -12,14 +12,14 @@
 [ext_resource path="res://player/Run-hero01_004.png" type="Texture" id=10]
 [ext_resource path="res://scripts/interactions/interaction_solver/Interaction_Solver.gd" type="Script" id=11]
 [ext_resource path="res://scripts/interactions/InteractionPickUp_Pills.gd" type="Script" id=12]
-[ext_resource path="res://audio/background_audio.wav" type="AudioStream" id=13]
+[ext_resource path="res://audio/gameplay/background.wav" type="AudioStream" id=13]
 [ext_resource path="res://scripts/interactions/InteractionPickUp_Keys.gd" type="Script" id=14]
 [ext_resource path="res://scripts/Player_Motion.gd" type="Script" id=15]
 [ext_resource path="res://scenes/Control.gd" type="Script" id=16]
 [ext_resource path="res://ui/inventory/item_panties.png" type="Texture" id=17]
 [ext_resource path="res://player/Idle-hero01_002.png" type="Texture" id=18]
-[ext_resource path="res://audio/item_keys_sound.wav" type="AudioStream" id=19]
-[ext_resource path="res://environment/BG.png" type="Texture" id=20]
+[ext_resource path="res://audio/obj.interact/item_shirt_sound.wav" type="AudioStream" id=19]
+[ext_resource path="res://environment/background_2.png" type="Texture" id=20]
 [ext_resource path="res://player/Idle-hero01_001.png" type="Texture" id=21]
 [ext_resource path="res://ui/inventory/item_keys.png" type="Texture" id=22]
 [ext_resource path="res://ui/inventory/item_pills.png" type="Texture" id=23]
@@ -34,8 +34,23 @@
 [ext_resource path="res://ui/inventory/item_beer.png" type="Texture" id=32]
 [ext_resource path="res://scripts/interactions/InteractionPickUp_Drunk_Levels.gd" type="Script" id=33]
 [ext_resource path="res://environment/shader_distort/shader_distort.tres" type="Material" id=34]
-[ext_resource path="res://audio/item_beer_sound.wav" type="AudioStream" id=35]
-[ext_resource path="res://audio/item_drugs_sound.wav" type="AudioStream" id=36]
+[ext_resource path="res://audio/obj.interact/item_beer_2_sound.wav" type="AudioStream" id=35]
+[ext_resource path="res://audio/obj.interact/item_drugs_sound.wav" type="AudioStream" id=36]
+[ext_resource path="res://scripts/Door.gd" type="Script" id=37]
+[ext_resource path="res://audio/obj.interact/item_keys_2_sound.wav" type="AudioStream" id=38]
+[ext_resource path="res://audio/obj.interact/item_pants_sound.wav" type="AudioStream" id=39]
+[ext_resource path="res://audio/obj.interact/door_locked.wav" type="AudioStream" id=40]
+[ext_resource path="res://audio/obj.interact/door_open_win.wav" type="AudioStream" id=41]
+[ext_resource path="res://audio/gameplay/background_drogas.wav" type="AudioStream" id=42]
+[ext_resource path="res://environment/background_overlay_3_curtain.png" type="Texture" id=43]
+[ext_resource path="res://audio/footsteps/casa de banho/wc_1.wav" type="AudioStream" id=44]
+[ext_resource path="res://scripts/weat_1_floor.gd" type="Script" id=45]
+[ext_resource path="res://audio/footsteps/casa de banho/wc_2.wav" type="AudioStream" id=46]
+[ext_resource path="res://scripts/weat_2_floor.gd" type="Script" id=47]
+[ext_resource path="res://audio/obj.interact/item_glasses_sound.wav" type="AudioStream" id=48]
+[ext_resource path="res://environment/background_overlay_5_portrait.png" type="Texture" id=49]
+[ext_resource path="res://environment/background_overlay_4_lamp.png" type="Texture" id=50]
+[ext_resource path="res://scripts/portrait_interact.gd" type="Script" id=51]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -55,9 +70,6 @@ animations = [ {
 "speed": 7.0
 } ]
 
-[sub_resource type="ImageTexture" id=12]
-size = Vector2( 1048, 600 )
-
 [sub_resource type="Shader" id=31]
 code = "shader_type canvas_item;
 
@@ -76,10 +88,95 @@ shader_param/lod = 0.5
 [sub_resource type="ImageTexture" id=33]
 size = Vector2( 1048, 600 )
 
+[sub_resource type="ImageTexture" id=12]
+size = Vector2( 1048, 600 )
+
+[sub_resource type="RectangleShape2D" id=35]
+extents = Vector2( 99.378, 42.3913 )
+
+[sub_resource type="Animation" id=37]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -4.6 ]
+}
+
+[sub_resource type="Animation" id=38]
+resource_name = "portrait_fixed"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1.51572, 2.73208, 0.517632 ),
+"update": 0,
+"values": [ 18.0, 22.0, -4.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=39]
+resource_name = "portrait_reveal"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 0.517632, 2.73208, 1.51572, 1 ),
+"update": 0,
+"values": [ 0.0, -4.0, 22.0, 18.0 ]
+}
+
+[sub_resource type="Animation" id=41]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -6.0 ]
+}
+
+[sub_resource type="Animation" id=40]
+resource_name = "lamp_loop_rotate"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4 ),
+"transitions": PoolRealArray( 1.7411, 0.287174, 1.07177, 0.482968, 1.62451 ),
+"update": 0,
+"values": [ -6.0, 0.0, 6.0, 0.0, -6.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=36]
+extents = Vector2( 19, 12.5 )
+
 [sub_resource type="NavigationPolygon" id=2]
-vertices = PoolVector2Array( 142, 592, 7, 593, 35.6382, 573.637, 142, 574, 1076, 434, 1139, 426, 1165, 426, 1149, 448, 1051, 504, 1247.03, 461.584, 1233, 428, 1268, 428, 1585, 547, 1628, 582, 1629, 594, 510, 592, 509, 573, 526, 512, 792, 518, 490, 573, 489, 593, 254, 426, 341, 446, 1056, 434, 558, 439, 781, 435, 1078, 426, 1157.1, 455.521, 1163, 461, 334, 428, 374, 446, 384, 424, 438, 421, 501, 509, 1386, 518, 1287, 428, 1346, 478, 1347, 490, 1488, 496, 1507, 505 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntArray( 9, 10, 11 ), PoolIntArray( 12, 13, 14, 15, 16, 17, 18 ), PoolIntArray( 19, 20, 0, 3, 21, 22 ), PoolIntArray( 8, 23, 4 ), PoolIntArray( 24, 25, 18, 17 ), PoolIntArray( 4, 26, 5 ), PoolIntArray( 8, 7, 27, 28 ), PoolIntArray( 21, 29, 22 ), PoolIntArray( 19, 22, 30 ), PoolIntArray( 19, 30, 31, 32, 33, 16 ), PoolIntArray( 16, 33, 17 ), PoolIntArray( 12, 18, 8, 34 ), PoolIntArray( 9, 11, 35, 36, 37 ), PoolIntArray( 34, 38, 39, 12 ), PoolIntArray( 34, 8, 28, 9, 37 ) ]
-outlines = [ PoolVector2Array( 142, 592, 7, 593, 35.6382, 573.637, 142, 574, 254, 426, 334, 428, 341, 446, 374, 446, 384, 424, 438, 421, 501, 509, 526, 512, 558, 439, 781, 435, 792, 518, 1051, 504, 1056, 434, 1076, 434, 1078, 426, 1139, 426, 1165, 426, 1149, 448, 1157.1, 455.521, 1163, 461, 1247.03, 461.584, 1233, 428, 1268, 428, 1287, 428, 1346, 478, 1347, 490, 1386, 518, 1488, 496, 1507, 505, 1585, 547, 1628, 582, 1629, 594, 510, 592, 509, 573, 490, 573, 489, 593 ) ]
+vertices = PoolVector2Array( 142, 592, 7, 593, 35.6382, 573.637, 137, 574, 1076, 434, 1139, 426, 1165, 426, 1149, 448, 1051, 504, 1247.03, 461.584, 1233, 428, 1268, 428, 1585, 547, 1628, 582, 1629, 594, 510, 592, 509, 573, 526, 512, 792, 518, 1056, 434, 139, 555, 189.631, 490.698, 203, 499, 558, 439, 781, 435, 1078, 426, 489, 593, 210.374, 484.457, 499, 577, 211, 465, 239, 428, 348, 442, 1157.1, 455.521, 1163, 461, 372, 442, 380, 423, 438, 421, 512, 505, 1287, 428, 1346, 478, 1347, 490, 338, 428, 1386, 518, 1488, 496, 1507, 505 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 4, 5, 6, 7, 8 ), PoolIntArray( 9, 10, 11 ), PoolIntArray( 12, 13, 14, 15, 16, 17, 18 ), PoolIntArray( 8, 19, 4 ), PoolIntArray( 20, 21, 22 ), PoolIntArray( 23, 24, 18, 17 ), PoolIntArray( 4, 25, 5 ), PoolIntArray( 26, 0, 3, 20, 22 ), PoolIntArray( 26, 22, 27, 28 ), PoolIntArray( 28, 27, 29, 30, 31 ), PoolIntArray( 8, 7, 32, 33 ), PoolIntArray( 28, 34, 35, 36, 37, 16 ), PoolIntArray( 9, 11, 38, 39, 40 ), PoolIntArray( 30, 41, 31 ), PoolIntArray( 28, 31, 34 ), PoolIntArray( 16, 37, 17 ), PoolIntArray( 12, 18, 8, 42 ), PoolIntArray( 42, 43, 44, 12 ), PoolIntArray( 42, 8, 33, 9, 40 ) ]
+outlines = [ PoolVector2Array( 142, 592, 7, 593, 35.6382, 573.637, 137, 574, 139, 555, 189.631, 490.698, 203, 499, 210.374, 484.457, 211, 465, 239, 428, 338, 428, 348, 442, 372, 442, 380, 423, 438, 421, 512, 505, 526, 512, 558, 439, 781, 435, 792, 518, 1051, 504, 1056, 434, 1076, 434, 1078, 426, 1139, 426, 1165, 426, 1149, 448, 1157.1, 455.521, 1163, 461, 1247.03, 461.584, 1233, 428, 1268, 428, 1287, 428, 1346, 478, 1347, 490, 1386, 518, 1488, 496, 1507, 505, 1585, 547, 1628, 582, 1629, 594, 510, 592, 509, 573, 499, 577, 489, 593 ) ]
 
 [sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 52, 24 )
@@ -211,7 +308,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 20, 20 )
+extents = Vector2( 16.5, 16 )
 
 [sub_resource type="Animation" id=5]
 length = 0.001
@@ -249,7 +346,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0.185, 0.185 ) ]
+"values": [ Vector2( 0.145, 0.145 ) ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -290,11 +387,11 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.8, 1, 1.2 ),
 "transitions": PoolRealArray( 1, 0.329877, 1.46409, 0.392291 ),
 "update": 0,
-"values": [ Vector2( 0.185, 0.185 ), Vector2( 0.215, 0.215 ), Vector2( 0.175, 0.175 ), Vector2( 0.185, 0.185 ) ]
+"values": [ Vector2( 0.145, 0.145 ), Vector2( 0.215, 0.215 ), Vector2( 0.135, 0.135 ), Vector2( 0.145, 0.145 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=25]
-extents = Vector2( 23.5, 11 )
+extents = Vector2( 8, 6 )
 
 [sub_resource type="Animation" id=26]
 length = 0.001
@@ -332,7 +429,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0.185, 0.185 ) ]
+"values": [ Vector2( 0.1, 0.1 ) ]
 }
 
 [sub_resource type="Animation" id=27]
@@ -373,7 +470,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.8, 1, 1.2 ),
 "transitions": PoolRealArray( 1, 0.329877, 1.46409, 0.392291 ),
 "update": 0,
-"values": [ Vector2( 0.185, 0.185 ), Vector2( 0.215, 0.215 ), Vector2( 0.175, 0.175 ), Vector2( 0.185, 0.185 ) ]
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 0.15, 0.15 ), Vector2( 0.09, 0.09 ), Vector2( 0.1, 0.1 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=19]
@@ -813,6 +910,9 @@ tracks/3/keys = {
 } ]
 }
 
+[sub_resource type="RectangleShape2D" id=34]
+extents = Vector2( 40, 177.75 )
+
 [node name="Control" type="Node2D"]
 script = ExtResource( 16 )
 
@@ -843,17 +943,6 @@ margin_bottom = 40.0
 margin_right = 40.0
 margin_bottom = 14.0
 
-[node name="ShaderDrunk" type="TextureRect" parent="Player/Camera2D"]
-visible = false
-material = ExtResource( 34 )
-margin_left = -5696.0
-margin_top = -3837.0
-margin_right = 10000.0
-margin_bottom = 10000.0
-mouse_filter = 2
-texture = SubResource( 12 )
-expand = true
-
 [node name="ShaderVeryDrunk" type="TextureRect" parent="Player/Camera2D"]
 visible = false
 material = SubResource( 32 )
@@ -866,6 +955,26 @@ mouse_filter = 2
 texture = SubResource( 33 )
 expand = true
 
+[node name="Node2D" type="Node2D" parent="Player"]
+z_index = 8
+
+[node name="ShaderDrunk" type="TextureRect" parent="Player/Node2D"]
+visible = false
+material = ExtResource( 34 )
+margin_left = -5696.0
+margin_top = -3837.0
+margin_right = 10000.0
+margin_bottom = 10000.0
+mouse_filter = 2
+texture = SubResource( 12 )
+expand = true
+
+[node name="Area2D" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
+position = Vector2( 6.27979, 18.8406 )
+shape = SubResource( 35 )
+
 [node name="Environment" type="Node2D" parent="."]
 
 [node name="bg_1_overlay" type="Sprite" parent="Environment"]
@@ -875,10 +984,64 @@ z_index = 1
 texture = ExtResource( 24 )
 offset = Vector2( -0.000244141, 7.2605 )
 
+[node name="bg_2_overlay" type="Sprite" parent="Environment"]
+position = Vector2( 218, 432 )
+scale = Vector2( 0.55, 0.55 )
+z_index = 1
+texture = ExtResource( 43 )
+
+[node name="Sprite" type="Sprite" parent="Environment"]
+position = Vector2( 953.579, 167.105 )
+rotation = -0.0802851
+scale = Vector2( 0.55, 0.55 )
+z_index = 1
+texture = ExtResource( 49 )
+offset = Vector2( -92.7273, 85.4545 )
+script = ExtResource( 51 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Environment/Sprite"]
+anims/RESET = SubResource( 37 )
+anims/portrait_fixed = SubResource( 38 )
+anims/portrait_reveal = SubResource( 39 )
+
+[node name="lamp_overlay" type="Sprite" parent="Environment"]
+position = Vector2( 988, 58 )
+rotation = -0.10472
+scale = Vector2( 0.55, 0.55 )
+z_index = 4
+texture = ExtResource( 50 )
+offset = Vector2( -7.27271, 96.3636 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Environment/lamp_overlay"]
+anims/RESET = SubResource( 41 )
+anims/lamp_loop_rotate = SubResource( 40 )
+
 [node name="Bg" type="Sprite" parent="Environment"]
-position = Vector2( 815, 299 )
+position = Vector2( 944, 163 )
 scale = Vector2( 0.550926, 0.550926 )
 texture = ExtResource( 20 )
+offset = Vector2( -234.151, 246.857 )
+
+[node name="weat_1_floor" type="Area2D" parent="Environment"]
+position = Vector2( 313, 485 )
+script = ExtResource( 45 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/weat_1_floor"]
+shape = SubResource( 36 )
+
+[node name="weat_1_floor_sound" type="AudioStreamPlayer2D" parent="Environment/weat_1_floor"]
+stream = ExtResource( 44 )
+
+[node name="weat_2_floor" type="Area2D" parent="Environment"]
+position = Vector2( 367, 560 )
+script = ExtResource( 47 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Environment/weat_2_floor"]
+position = Vector2( 0, -0.5 )
+shape = SubResource( 36 )
+
+[node name="weat_2_floor_sound" type="AudioStreamPlayer2D" parent="Environment/weat_2_floor"]
+stream = ExtResource( 46 )
 
 [node name="Line2D" type="Line2D" parent="."]
 z_index = 1
@@ -917,6 +1080,9 @@ anims/interact = ExtResource( 8 )
 position = Vector2( -20, 20 )
 scale = Vector2( 2, 2 )
 
+[node name="item_pants_sound" type="AudioStreamPlayer2D" parent="InteractionsObjects_PickUp_Pants"]
+stream = ExtResource( 39 )
+
 [node name="InteractionsObjects_PickUp_Keys" type="Area2D" parent="."]
 position = Vector2( 366, 22 )
 z_index = 2
@@ -938,22 +1104,22 @@ anims/interact = SubResource( 14 )
 [node name="Position2D" type="Position2D" parent="InteractionsObjects_PickUp_Keys/CollisionShape2D"]
 position = Vector2( -21, 161 )
 
-[node name="item_sound" type="AudioStreamPlayer2D" parent="InteractionsObjects_PickUp_Keys"]
-stream = ExtResource( 19 )
+[node name="item_keys_sound" type="AudioStreamPlayer2D" parent="InteractionsObjects_PickUp_Keys"]
+stream = ExtResource( 38 )
 volume_db = 5.0
 attenuation = 1.51572
 
 [node name="InteractionsObjects_PickUp_Panties" type="Area2D" parent="."]
-position = Vector2( -726, 91 )
+position = Vector2( -805, 114 )
 script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionsObjects_PickUp_Panties"]
-position = Vector2( 1034, 340 )
+position = Vector2( 1032, 340 )
 shape = SubResource( 7 )
 script = ExtResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="InteractionsObjects_PickUp_Panties/CollisionShape2D"]
-scale = Vector2( 0.185, 0.185 )
+scale = Vector2( 0.145, 0.145 )
 texture = ExtResource( 17 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="InteractionsObjects_PickUp_Panties/CollisionShape2D/Sprite"]
@@ -961,10 +1127,10 @@ anims/RESET = SubResource( 5 )
 anims/interact = SubResource( 6 )
 
 [node name="Position2D" type="Position2D" parent="InteractionsObjects_PickUp_Panties/CollisionShape2D"]
-position = Vector2( 32, 20 )
+position = Vector2( 17, 14 )
 
 [node name="InteractionsObjects_PickUp_Glasses" type="Area2D" parent="."]
-position = Vector2( -817, 205 )
+position = Vector2( -635, -43 )
 script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionsObjects_PickUp_Glasses"]
@@ -973,7 +1139,7 @@ shape = SubResource( 25 )
 script = ExtResource( 31 )
 
 [node name="Sprite" type="Sprite" parent="InteractionsObjects_PickUp_Glasses/CollisionShape2D"]
-scale = Vector2( 0.185, 0.185 )
+scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 30 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="InteractionsObjects_PickUp_Glasses/CollisionShape2D/Sprite"]
@@ -981,10 +1147,14 @@ anims/RESET = SubResource( 26 )
 anims/interact = SubResource( 27 )
 
 [node name="Position2D" type="Position2D" parent="InteractionsObjects_PickUp_Glasses/CollisionShape2D"]
-position = Vector2( -1, 11 )
+position = Vector2( 24, 122 )
+
+[node name="item_glasses_sound" type="AudioStreamPlayer2D" parent="InteractionsObjects_PickUp_Glasses"]
+stream = ExtResource( 48 )
+volume_db = 15.0
 
 [node name="InteractionsObjects_PickUp_Shoes" type="Area2D" parent="."]
-position = Vector2( -434, 214 )
+position = Vector2( -464, 225 )
 script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionsObjects_PickUp_Shoes"]
@@ -1002,6 +1172,8 @@ anims/interact = SubResource( 18 )
 
 [node name="Position2D" type="Position2D" parent="InteractionsObjects_PickUp_Shoes/CollisionShape2D"]
 position = Vector2( 25, -7 )
+
+[node name="item_shoes_sound" type="AudioStreamPlayer2D" parent="InteractionsObjects_PickUp_Shoes"]
 
 [node name="InteractionsObjects_PickUp_Tshirt" type="Area2D" parent="."]
 position = Vector2( -53, 78 )
@@ -1024,7 +1196,7 @@ anims/interact = SubResource( 21 )
 position = Vector2( 38, 110 )
 
 [node name="InteractionsObjects_PickUp_Shirt" type="Area2D" parent="."]
-position = Vector2( 444, 236 )
+position = Vector2( 301, 232 )
 script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionsObjects_PickUp_Shirt"]
@@ -1042,6 +1214,9 @@ anims/interact = SubResource( 24 )
 
 [node name="Position2D" type="Position2D" parent="InteractionsObjects_PickUp_Shirt/CollisionShape2D"]
 position = Vector2( -71, 27 )
+
+[node name="item_shirt_sound" type="AudioStreamPlayer2D" parent="InteractionsObjects_PickUp_Shirt"]
+stream = ExtResource( 19 )
 
 [node name="InteractionsObjects_PickUp_Pills" type="Area2D" parent="."]
 position = Vector2( -1, -2 )
@@ -1063,7 +1238,7 @@ anims/interact = SubResource( 9 )
 [node name="Position2D" type="Position2D" parent="InteractionsObjects_PickUp_Pills/CollisionShape2D"]
 position = Vector2( 44, 95 )
 
-[node name="item_sound" type="AudioStreamPlayer2D" parent="InteractionsObjects_PickUp_Pills"]
+[node name="item_drugs_sound" type="AudioStreamPlayer2D" parent="InteractionsObjects_PickUp_Pills"]
 stream = ExtResource( 36 )
 volume_db = 8.0
 pitch_scale = 1.4
@@ -1093,7 +1268,28 @@ position = Vector2( 3, 7 )
 stream = ExtResource( 35 )
 volume_db = 9.0
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Hitbox" type="Area2D" parent="."]
+position = Vector2( 5, 3 )
+script = ExtResource( 37 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2( 1544, 368.75 )
+shape = SubResource( 34 )
+
+[node name="game_complete" type="AudioStreamPlayer2D" parent="Hitbox"]
+stream = ExtResource( 41 )
+
+[node name="door_locked" type="AudioStreamPlayer2D" parent="Hitbox"]
+stream = ExtResource( 40 )
+
+[node name="background_sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 881, 154 )
 stream = ExtResource( 13 )
+volume_db = -17.051
 autoplay = true
 max_distance = 4000.0
+
+[node name="background_drug_sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 875, 158 )
+stream = ExtResource( 42 )
+volume_db = -16.452

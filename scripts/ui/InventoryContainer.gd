@@ -10,6 +10,8 @@ var active_slot = null
 var place_item : bool = false
 var timer = 0.1 
 onready var movable_item : Node2D = $movable_item
+onready var menu_click_left = $"../menu_click_left"
+onready var menu_click_right = $"../menu_click_right"
 
 #func _ready():
 #	for h_slot in scrollContainer.get_node("HBoxContainer").get_children():
@@ -64,12 +66,13 @@ func activateSlots(var slot):
 			h_slot.toggleActivation(false)
 
 func _on_LeftArrowButton_pressed():
-	print("tanto faz")
+	menu_click_left.play()
 	var value = scrollContainer.get_h_scroll()
 	scrollContainer.set_h_scroll(value - 200)
 
 
 func _on_RightArrowButton_pressed():
+	menu_click_right.play()
 	var value = scrollContainer.get_h_scroll()
 	scrollContainer.set_h_scroll(value + 200)
 

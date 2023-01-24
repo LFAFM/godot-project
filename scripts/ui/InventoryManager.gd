@@ -10,3 +10,9 @@ func set_item(texture : Texture) -> bool:
 			current_item.texture = texture
 			return true
 	return false 
+
+func has_key() -> bool:
+	for elm in holder.get_children():
+		if (elm.get_item_name() == "item_keys"):
+			return true
+	return false

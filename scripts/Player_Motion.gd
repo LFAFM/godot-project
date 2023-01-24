@@ -137,4 +137,3 @@ func change_state(newState):
 				KSTATE.keys()[state].to_lower(),
 				int(has_sweaty_panties), int(has_glasses), int(has_pants), int(has_shirt), int(has_tshirt)
 			])
-			print("interact, credous!")

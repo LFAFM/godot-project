@@ -1,15 +1,15 @@
-[gd_scene load_steps=93 format=2]
+[gd_scene load_steps=98 format=2]
 
-[ext_resource path="res://player/Run-hero01_003.png" type="Texture" id=1]
-[ext_resource path="res://player/Run-hero01_001.png" type="Texture" id=2]
-[ext_resource path="res://player/Run-hero01_002.png" type="Texture" id=3]
+[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00000.png" type="Texture" id=1]
+[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00001.png" type="Texture" id=2]
+[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00002.png" type="Texture" id=3]
 [ext_resource path="res://scenes/Inventory.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/interactions/InteractionPickUp_Shoes.gd" type="Script" id=5]
 [ext_resource path="res://scripts/interactions/InteractionPickUp.gd" type="Script" id=6]
-[ext_resource path="res://player/Run-hero01_005.png" type="Texture" id=7]
+[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00003.png" type="Texture" id=7]
 [ext_resource path="res://scenes/animations/item_interact.tres" type="Animation" id=8]
 [ext_resource path="res://scripts/interactions/InteractionPickUp_Panties.gd" type="Script" id=9]
-[ext_resource path="res://player/Run-hero01_004.png" type="Texture" id=10]
+[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00004.png" type="Texture" id=10]
 [ext_resource path="res://scripts/interactions/interaction_solver/Interaction_Solver.gd" type="Script" id=11]
 [ext_resource path="res://scripts/interactions/InteractionPickUp_Pills.gd" type="Script" id=12]
 [ext_resource path="res://audio/gameplay/background.wav" type="AudioStream" id=13]
@@ -55,6 +55,11 @@
 [ext_resource path="res://animations/portrait_reveal.tres" type="Animation" id=53]
 [ext_resource path="res://audio/obj.interact/cueca.wav" type="AudioStream" id=54]
 [ext_resource path="res://audio/footsteps/sala/sala_4.wav" type="AudioStream" id=55]
+[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00005.png" type="Texture" id=56]
+[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00008.png" type="Texture" id=57]
+[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00007.png" type="Texture" id=58]
+[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00006.png" type="Texture" id=59]
+[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00009.png" type="Texture" id=60]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -68,10 +73,10 @@ animations = [ {
 "name": "interact_1_1_1_1_1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 10 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 56 ), ExtResource( 59 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 60 ) ],
 "loop": true,
 "name": "move_1_1_1_1_1",
-"speed": 7.0
+"speed": 11.0
 } ]
 
 [sub_resource type="Shader" id=31]
@@ -927,6 +932,7 @@ speed = 300
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2( 0, -170.443 )
 current = true
+zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
 
 [node name="Control" type="Control" parent="Player/Camera2D"]

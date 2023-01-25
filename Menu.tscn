@@ -40,13 +40,15 @@ script = ExtResource( 2 )
 mainGameScene = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1048.0
-margin_bottom = 600.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 color = Color( 0.541176, 0.807843, 0.447059, 1 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-margin_right = 1048.0
-margin_bottom = 600.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 custom_constants/margin_right = 200
 custom_constants/margin_top = 75
 custom_constants/margin_left = 200
@@ -55,12 +57,12 @@ custom_constants/margin_bottom = 100
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 margin_left = 200.0
 margin_top = 75.0
-margin_right = 852.0
-margin_bottom = 500.0
+margin_right = 1720.0
+margin_bottom = 980.0
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
-margin_right = 652.0
-margin_bottom = 210.0
+margin_right = 1520.0
+margin_bottom = 450.0
 size_flags_horizontal = 3
 size_flags_vertical = 7
 custom_fonts/font = SubResource( 1 )
@@ -69,15 +71,15 @@ align = 1
 valign = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
-margin_top = 214.0
-margin_right = 652.0
-margin_bottom = 425.0
+margin_top = 454.0
+margin_right = 1520.0
+margin_bottom = 905.0
 size_flags_vertical = 3
 custom_constants/separation = 20
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
-margin_right = 652.0
-margin_bottom = 57.0
+margin_right = 1520.0
+margin_bottom = 137.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 50
@@ -85,8 +87,8 @@ custom_constants/margin_left = 50
 
 [node name="NewGame_Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer"]
 margin_left = 50.0
-margin_right = 602.0
-margin_bottom = 57.0
+margin_right = 1470.0
+margin_bottom = 137.0
 focus_neighbour_top = NodePath("../../MarginContainer3/Quit_Button")
 focus_mode = 0
 size_flags_horizontal = 3
@@ -98,20 +100,22 @@ custom_styles/normal = SubResource( 5 )
 text = "Start"
 
 [node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
-margin_top = 77.0
-margin_right = 652.0
-margin_bottom = 134.0
+margin_top = 157.0
+margin_right = 1520.0
+margin_bottom = 294.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 50
 custom_constants/margin_left = 50
 
 [node name="Options_Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer2" instance=ExtResource( 5 )]
+margin_right = 1470.0
+margin_bottom = 137.0
 
 [node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer"]
-margin_top = 154.0
-margin_right = 652.0
-margin_bottom = 211.0
+margin_top = 314.0
+margin_right = 1520.0
+margin_bottom = 451.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 50
@@ -119,8 +123,8 @@ custom_constants/margin_left = 50
 
 [node name="Quit_Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer3"]
 margin_left = 50.0
-margin_right = 602.0
-margin_bottom = 57.0
+margin_right = 1470.0
+margin_bottom = 137.0
 focus_neighbour_bottom = NodePath("../../MarginContainer/NewGame_Button")
 focus_mode = 0
 size_flags_horizontal = 3

@@ -8,12 +8,14 @@ onready var texture = get_node("Sprite").get_texture()
 export var RIGHT : bool
 var Inventory
 var slowmo_active: bool = false
+onready var item_audio_player = $"../item_panties_sound"
 
 export(float) var normal_time_scale: float = 1.0
 export(float) var slowmo_time_scale: float = 0.5
 
 
 func interact():
+	item_audio_player.play()
 	set_z_index(5)
 	get_node("Sprite/AnimationPlayer").play("interact")
 	player_state.set_modulate(Color.green) # play_state.("interact")

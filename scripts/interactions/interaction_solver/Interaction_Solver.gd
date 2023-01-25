@@ -10,7 +10,7 @@ func _on_InteractionsObjects_input_event(_object, _event, shape_idx):
 	if !Input.is_action_pressed("ui_leftMouseClick"):
 		return
 	get_tree().set_input_as_handled()
-		
+	
 	Player.is_going_to_interact = true
 	Player.interactable_object = self.get_child(shape_idx)
 	

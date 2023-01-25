@@ -17,7 +17,7 @@ func interact():
 	item_audio_player.play()
 	set_z_index(5)
 	get_node("Sprite/AnimationPlayer").play("interact")
-	player_state.set_modulate(Color.palevioletred) # play_state.("interact")
+#	player_state.set_modulate(Color.palevioletred) # play_state.("interact")
 	yield(get_node("Sprite/AnimationPlayer"),"animation_finished")
 	Inventory.set_item(texture) # ADICIONAR AO INVENTÁRIO
 	get_parent().queue_free()

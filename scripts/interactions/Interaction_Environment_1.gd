@@ -8,16 +8,26 @@ onready var texture = get_node("Sprite").get_texture()
 export var RIGHT : bool
 var Inventory
 var slowmo_active: bool = false
-onready var item_audio_player = $"../item_shoes_sound"
+var click_null = 0
+var click_true = 1
+var anim_finished = false;
 
 export(float) var normal_time_scale: float = 1.0
 export(float) var slowmo_time_scale: float = 0.5
 
 
 func interact():
-	item_audio_player.play()
 	set_z_index(5)
-	get_node("Sprite/AnimationPlayer").play("interact")
-	player_state.set_modulate(Color.blue) # play_state.("interact")
-	yield(get_node("Sprite/AnimationPlayer"),"animation_finished")
-	get_parent().queue_free()
+	var anim = get_node("Sprite/AnimationPlayer");
+	
+	if !anim_finished:
+		anim.play("portrait_reveal");
+		player_state.set_modulate(Color.yellow);
+	else:
+		anim.play("portrait_fixed");
+	
+	anim.connect("animation_finished", self, "_animFinished");
+
+
+func _animFinished(animid : String):
+	anim_finished = !anim_finished;

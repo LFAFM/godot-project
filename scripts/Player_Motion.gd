@@ -19,7 +19,7 @@ var has_glasses : bool = false  # 2º OBJ [true = 1; false = 0]
 var has_pants : bool = false # 3º OBJ [true = 1; false = 0]
 var has_shirt : bool = false # 4º OBJ [true = 1; false = 0]
 var has_tshirt : bool = false # 5º OBJ [true = 1; false = 0]
-
+var has_shoes : bool = false # 6º OBJ [true = 1; false = 0]
 
 var state = KSTATE.IDLE
 
@@ -37,6 +37,7 @@ func _ready():
 	has_pants = true
 	has_shirt = true
 	has_tshirt = true
+	has_shoes = true
 	change_state(KSTATE.IDLE)
 	destination = position
 	is_climbing = false
@@ -120,20 +121,20 @@ func change_state(newState):
 		KSTATE.IDLE:
 			if(!is_climbing):
 				print(KSTATE.keys()[state].to_lower())
-				self.play("%s_%s_%s_%s_%s_%s" % [
+				self.play("%s_%s_%s_%s_%s_%s_%s" % [
 					KSTATE.keys()[state].to_lower(),
-					int(has_sweaty_panties), int(has_glasses), int(has_pants), int(has_shirt), int(has_tshirt)
+					int(has_sweaty_panties), int(has_glasses), int(has_pants), int(has_shirt), int(has_tshirt), int(has_shoes)
 				]) # falta definir 3 variáveis 
 			if(is_climbing):
 				self.play("climb_idle")
 		KSTATE.MOVE:
-				self.play("%s_%s_%s_%s_%s_%s" % [
+				self.play("%s_%s_%s_%s_%s_%s_%s" % [
 					KSTATE.keys()[state].to_lower(),
-					int(has_sweaty_panties), int(has_glasses), int(has_pants), int(has_shirt), int(has_tshirt)
+					int(has_sweaty_panties), int(has_glasses), int(has_pants), int(has_shirt), int(has_tshirt), int(has_shoes)
 				])
 		KSTATE.INTERACT:
 			interactable_object.interact()
-			self.play("%s_%s_%s_%s_%s_%s" % [
+			self.play("%s_%s_%s_%s_%s_%s_%s" % [
 				KSTATE.keys()[state].to_lower(),
-				int(has_sweaty_panties), int(has_glasses), int(has_pants), int(has_shirt), int(has_tshirt)
+				int(has_sweaty_panties), int(has_glasses), int(has_pants), int(has_shirt), int(has_tshirt), int(has_shoes)
 			])

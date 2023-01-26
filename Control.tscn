@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=2]
+[gd_scene load_steps=101 format=2]
 
 [ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00000.png" type="Texture" id=1]
 [ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00001.png" type="Texture" id=2]
@@ -60,6 +60,7 @@
 [ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00007.png" type="Texture" id=58]
 [ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00006.png" type="Texture" id=59]
 [ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00009.png" type="Texture" id=60]
+[ext_resource path="res://scripts/lamp_swing.gd" type="Script" id=61]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -136,6 +137,37 @@ tracks/0/keys = {
 
 [sub_resource type="RectangleShape2D" id=36]
 extents = Vector2( 19, 12.5 )
+
+[sub_resource type="Animation" id=43]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -4.0 ]
+}
+
+[sub_resource type="Animation" id=44]
+resource_name = "swing_loop_chandelier"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.9, 5.9 ),
+"transitions": PoolRealArray( 2.14355, 2.92818, 2.07053 ),
+"update": 0,
+"values": [ -4.0, 4.0, -4.0 ]
+}
 
 [sub_resource type="NavigationPolygon" id=2]
 vertices = PoolVector2Array( 142, 592, 7, 593, 35.6382, 573.637, 137, 574, 1076, 434, 1139, 426, 1165, 426, 1149, 448, 1051, 504, 1247.03, 461.584, 1233, 428, 1268, 428, 1585, 547, 1628, 582, 1629, 594, 510, 592, 509, 573, 526, 512, 792, 518, 1056, 434, 139, 555, 189.631, 490.698, 203, 499, 558, 439, 781, 435, 1078, 426, 489, 593, 210.374, 484.457, 499, 577, 211, 465, 239, 428, 348, 442, 1157.1, 455.521, 1163, 461, 372, 442, 380, 423, 438, 421, 512, 505, 1287, 428, 1346, 478, 1347, 490, 338, 428, 1386, 518, 1488, 496, 1507, 505 )
@@ -231,7 +263,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 6.5, 6 )
+extents = Vector2( 11, 11 )
 
 [sub_resource type="Animation" id=13]
 length = 0.001
@@ -995,6 +1027,7 @@ z_index = 1
 texture = ExtResource( 43 )
 
 [node name="lamp_overlay" type="Sprite" parent="Environment"]
+visible = false
 position = Vector2( 988, 58 )
 rotation = -0.10472
 scale = Vector2( 0.55, 0.55 )
@@ -1036,12 +1069,18 @@ shape = SubResource( 36 )
 stream = ExtResource( 46 )
 
 [node name="Sprite" type="Sprite" parent="Environment"]
-position = Vector2( 996, 54 )
-rotation = -0.0510705
+position = Vector2( 989, 54 )
+rotation = -0.0698132
 scale = Vector2( 0.55, 0.55 )
 z_index = 10
 texture = ExtResource( 50 )
 offset = Vector2( -9.09094, 100 )
+script = ExtResource( 61 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Environment/Sprite"]
+pause_mode = 2
+anims/RESET = SubResource( 43 )
+anims/swing_loop_chandelier = SubResource( 44 )
 
 [node name="Line2D" type="Line2D" parent="."]
 z_index = 1
@@ -1055,8 +1094,8 @@ navpoly = SubResource( 2 )
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Inventory" parent="UI" instance=ExtResource( 4 )]
-position = Vector2( 549, 14 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 1078, 45 )
+scale = Vector2( 0.5, 0.5 )
 z_index = 4
 z_as_relative = false
 

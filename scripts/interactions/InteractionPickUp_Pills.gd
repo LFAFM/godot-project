@@ -26,7 +26,7 @@ func interact():
 	set_z_index(5)
 	get_node("Sprite/AnimationPlayer").play("interact")
 	shader_drunk.set_visible(true)
-	player_state.set_modulate(Color.pink) # play_state.("interact")
+#	player_state.set_modulate(Color.pink) # play_state.("interact")
 	
 func delete():
 	get_parent().queue_free()

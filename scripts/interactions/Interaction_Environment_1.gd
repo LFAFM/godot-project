@@ -22,7 +22,7 @@ func interact():
 	
 	if !anim_finished:
 		anim.play("portrait_reveal");
-		player_state.set_modulate(Color.yellow);
+#		player_state.set_modulate(Color.yellow);
 	else:
 		anim.play("portrait_fixed");
 	

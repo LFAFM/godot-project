@@ -18,6 +18,6 @@ func interact():
 	item_audio_player.play()
 	set_z_index(5)
 	get_node("Sprite/AnimationPlayer").play("interact")
-	player_state.set_modulate(Color.blue) # play_state.("interact")
+	player_state.has_shoes = true
 	yield(get_node("Sprite/AnimationPlayer"),"animation_finished")
 	get_parent().queue_free()

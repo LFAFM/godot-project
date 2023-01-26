@@ -1,15 +1,15 @@
-[gd_scene load_steps=143 format=2]
+[gd_scene load_steps=590 format=2]
 
-[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00000.png" type="Texture" id=1]
-[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00001.png" type="Texture" id=2]
-[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00002.png" type="Texture" id=3]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00006.png" type="Texture" id=1]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00002.png" type="Texture" id=2]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00003.png" type="Texture" id=3]
 [ext_resource path="res://scenes/Inventory.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/interactions/InteractionPickUp_Shoes.gd" type="Script" id=5]
 [ext_resource path="res://scripts/interactions/InteractionPickUp.gd" type="Script" id=6]
-[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00003.png" type="Texture" id=7]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00005.png" type="Texture" id=7]
 [ext_resource path="res://scenes/animations/item_interact.tres" type="Animation" id=8]
 [ext_resource path="res://scripts/interactions/InteractionPickUp_Panties.gd" type="Script" id=9]
-[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00004.png" type="Texture" id=10]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00007.png" type="Texture" id=10]
 [ext_resource path="res://scripts/interactions/interaction_solver/Interaction_Solver.gd" type="Script" id=11]
 [ext_resource path="res://scripts/interactions/InteractionPickUp_Pills.gd" type="Script" id=12]
 [ext_resource path="res://audio/gameplay/background.wav" type="AudioStream" id=13]
@@ -55,45 +55,45 @@
 [ext_resource path="res://animations/portrait_reveal.tres" type="Animation" id=53]
 [ext_resource path="res://audio/obj.interact/cueca.wav" type="AudioStream" id=54]
 [ext_resource path="res://audio/footsteps/sala/sala_4.wav" type="AudioStream" id=55]
-[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00005.png" type="Texture" id=56]
-[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00008.png" type="Texture" id=57]
-[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00007.png" type="Texture" id=58]
-[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00006.png" type="Texture" id=59]
-[ext_resource path="res://player/walk_anims/1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00009.png" type="Texture" id=60]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00000.png" type="Texture" id=56]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00004.png" type="Texture" id=57]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00009.png" type="Texture" id=58]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00001.png" type="Texture" id=59]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00008.png" type="Texture" id=60]
 [ext_resource path="res://scripts/lamp_swing.gd" type="Script" id=61]
-[ext_resource path="res://player/walk_anims/1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00009.png" type="Texture" id=62]
-[ext_resource path="res://player/walk_anims/0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00009.png" type="Texture" id=63]
+[ext_resource path="res://player/idle/idle_0_0_0_1_1_1/idle_hero_0_0_0_1_1_1.png" type="Texture" id=62]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00000.png" type="Texture" id=63]
 [ext_resource path="res://player/idle/idle_0_0_0_0_0_0/idle_hero_0_0_0_0_0_0.png" type="Texture" id=64]
-[ext_resource path="res://player/walk_anims/0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00004.png" type="Texture" id=65]
-[ext_resource path="res://player/walk_anims/0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00008.png" type="Texture" id=66]
-[ext_resource path="res://player/walk_anims/0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00006.png" type="Texture" id=67]
-[ext_resource path="res://player/walk_anims/1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00006.png" type="Texture" id=68]
-[ext_resource path="res://player/walk_anims/0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00000.png" type="Texture" id=69]
-[ext_resource path="res://player/walk_anims/0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00005.png" type="Texture" id=70]
-[ext_resource path="res://player/walk_anims/1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00002.png" type="Texture" id=71]
-[ext_resource path="res://player/walk_anims/0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00001.png" type="Texture" id=72]
-[ext_resource path="res://player/walk_anims/0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00003.png" type="Texture" id=73]
-[ext_resource path="res://player/walk_anims/0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00007.png" type="Texture" id=74]
-[ext_resource path="res://player/walk_anims/1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00000.png" type="Texture" id=75]
-[ext_resource path="res://player/walk_anims/1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00003.png" type="Texture" id=76]
-[ext_resource path="res://player/walk_anims/1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00007.png" type="Texture" id=77]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00001.png" type="Texture" id=65]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00006.png" type="Texture" id=66]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00002.png" type="Texture" id=67]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00004.png" type="Texture" id=68]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00008.png" type="Texture" id=69]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00005.png" type="Texture" id=70]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00003.png" type="Texture" id=71]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00007.png" type="Texture" id=72]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00009.png" type="Texture" id=73]
+[ext_resource path="res://player/idle/idle_0_0_1_1_1_1/idle_hero_0_0_1_1_1_1.png" type="Texture" id=74]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00001.png" type="Texture" id=75]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00002.png" type="Texture" id=76]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00000.png" type="Texture" id=77]
 [ext_resource path="res://player/idle/idle_1_0_0_0_0_0/0_idle_hero_1_0_0_0_0_0.png" type="Texture" id=78]
-[ext_resource path="res://player/walk_anims/0_0_0_0_0_0/walk_hero_0_0_0_0_0_0_00002.png" type="Texture" id=79]
-[ext_resource path="res://player/walk_anims/1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00004.png" type="Texture" id=80]
-[ext_resource path="res://player/walk_anims/1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00005.png" type="Texture" id=81]
-[ext_resource path="res://player/walk_anims/1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00008.png" type="Texture" id=82]
-[ext_resource path="res://player/walk_anims/1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00001.png" type="Texture" id=83]
-[ext_resource path="res://player/walk_anims/1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00003.png" type="Texture" id=84]
-[ext_resource path="res://player/walk_anims/1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00004.png" type="Texture" id=85]
-[ext_resource path="res://player/walk_anims/1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00007.png" type="Texture" id=86]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00009.png" type="Texture" id=79]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00008.png" type="Texture" id=80]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00006.png" type="Texture" id=81]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00003.png" type="Texture" id=82]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00004.png" type="Texture" id=83]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00005.png" type="Texture" id=84]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_0/walk_hero_1_0_0_0_0_0_00007.png" type="Texture" id=85]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00002.png" type="Texture" id=86]
 [ext_resource path="res://player/idle/idle_1_1_0_0_0_0/0_idle_hero_1_1_0_0_0_0.png" type="Texture" id=87]
-[ext_resource path="res://player/walk_anims/1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00001.png" type="Texture" id=88]
-[ext_resource path="res://player/walk_anims/1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00005.png" type="Texture" id=89]
-[ext_resource path="res://player/walk_anims/1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00000.png" type="Texture" id=90]
-[ext_resource path="res://player/walk_anims/1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00006.png" type="Texture" id=91]
-[ext_resource path="res://player/walk_anims/1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00002.png" type="Texture" id=92]
-[ext_resource path="res://player/walk_anims/1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00008.png" type="Texture" id=93]
-[ext_resource path="res://player/walk_anims/1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00009.png" type="Texture" id=94]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00006.png" type="Texture" id=88]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00004.png" type="Texture" id=89]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00008.png" type="Texture" id=90]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00007.png" type="Texture" id=91]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00009.png" type="Texture" id=92]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00003.png" type="Texture" id=93]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00005.png" type="Texture" id=94]
 [ext_resource path="res://player/idle/idle_1_1_1_0_0_1/0_idle_hero_1_1_1_0_0_1.png" type="Texture" id=95]
 [ext_resource path="res://player/idle/idle_1_0_1_1_1_1/0_idle_hero_1_0_1_1_1_1.png" type="Texture" id=96]
 [ext_resource path="res://player/idle/idle_1_1_1_1_1_1/0_idle_hero_1_1_1_1_1_1.png" type="Texture" id=97]
@@ -103,6 +103,453 @@
 [ext_resource path="res://player/idle/idle_1_1_0_1_1_1/0_idle_hero_1_1_0_1_1_1.png" type="Texture" id=101]
 [ext_resource path="res://player/idle/idle_1_1_0_0_0_1/0_idle_hero_1_1_0_0_0_1.png" type="Texture" id=102]
 [ext_resource path="res://player/idle/idle_1_0_1_1_0_1/0_idle_hero_1_0_1_1_0_1.png" type="Texture" id=103]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_0/walk_hero_0_0_0_1_0_0_00000.png" type="Texture" id=104]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_0/walk_hero_0_0_0_1_0_0_00002.png" type="Texture" id=105]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_0/walk_hero_0_0_0_1_0_0_00003.png" type="Texture" id=106]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_1/walk_hero_0_0_0_0_1_1_00007.png" type="Texture" id=107]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_1/walk_hero_0_0_0_0_1_1_00008.png" type="Texture" id=108]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_1/walk_hero_0_0_0_0_1_1_00009.png" type="Texture" id=109]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_0/walk_hero_0_0_0_1_0_0_00001.png" type="Texture" id=110]
+[ext_resource path="res://player/idle/idle_0_1_1_0_0_1/0_idle_hero_0_1_1_0_0_1.png" type="Texture" id=111]
+[ext_resource path="res://player/idle/idle_0_0_1_1_0_0/0_idle_hero_0_0_0_1_1_0.png" type="Texture" id=112]
+[ext_resource path="res://player/idle/idle_0_0_1_1_0_1/0_idle_hero_0_0_1_1_0_1.png" type="Texture" id=113]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_1/walk_hero_0_0_0_0_0_1_00007.png" type="Texture" id=114]
+[ext_resource path="res://player/idle/idle_0_1_1_1_1_1/0_idle_hero_0_1_1_1_1_1.png" type="Texture" id=115]
+[ext_resource path="res://player/idle/idle_1_0_1_1_0_0/0_idle_hero_1_0_1_1_0_0.png" type="Texture" id=116]
+[ext_resource path="res://player/idle/idle_1_0_1_0_1_0/0_idle_hero_1_0_1_0_1_0.png" type="Texture" id=117]
+[ext_resource path="res://player/idle/idle_1_0_0_0_1_1/0_idle_hero_1_0_0_0_1_1.png" type="Texture" id=118]
+[ext_resource path="res://player/idle/idle_0_0_1_1_1_0/0_idle_hero_0_0_1_1_1_0.png" type="Texture" id=119]
+[ext_resource path="res://player/idle/idle_0_1_0_1_1_1/0_idle_hero_0_1_0_1_1_1.png" type="Texture" id=120]
+[ext_resource path="res://player/idle/idle_0_1_1_1_1_0/0_idle_hero_0_1_1_1_1_0.png" type="Texture" id=121]
+[ext_resource path="res://player/idle/idle_0_0_0_0_0_1/0_idle_hero_0_0_0_0_0_1.png" type="Texture" id=122]
+[ext_resource path="res://player/idle/idle_1_0_1_0_0_1/0_idle_hero_1_0_1_0_0_1.png" type="Texture" id=123]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_1/walk_hero_0_0_0_0_0_1_00009.png" type="Texture" id=124]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_0/walk_hero_0_0_0_0_1_0_00000.png" type="Texture" id=125]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_0/walk_hero_0_0_0_0_1_0_00001.png" type="Texture" id=126]
+[ext_resource path="res://player/idle/idle_0_0_0_0_1_0/0_idle_hero_0_0_0_0_1_0.png" type="Texture" id=127]
+[ext_resource path="res://player/idle/idle_0_1_0_0_0_1/0_idle_hero_0_1_0_0_0_1.png" type="Texture" id=128]
+[ext_resource path="res://player/idle/idle_0_0_0_1_1_0/0_idle_hero_0_0_0_1_1_0.png" type="Texture" id=129]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_0/walk_hero_0_0_0_0_1_0_00003.png" type="Texture" id=130]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_0/walk_hero_0_0_0_0_1_0_00006.png" type="Texture" id=131]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_0/walk_hero_0_0_0_0_1_0_00007.png" type="Texture" id=132]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_0/walk_hero_0_0_0_0_1_0_00008.png" type="Texture" id=133]
+[ext_resource path="res://player/idle/idle_1_0_1_0_1_1/0_idle_hero_1_0_1_0_1_1.png" type="Texture" id=134]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_0/walk_hero_0_0_0_0_1_0_00009.png" type="Texture" id=135]
+[ext_resource path="res://player/idle/idle_1_0_0_0_0_1/0_idle_hero_1_0_0_0_0_1.png" type="Texture" id=136]
+[ext_resource path="res://player/idle/idle_1_0_0_1_0_1/0_idle_hero_1_0_0_1_0_1.png" type="Texture" id=137]
+[ext_resource path="res://player/idle/idle_0_1_0_1_1_0/0_idle_hero_0_1_0_1_1_0.png" type="Texture" id=138]
+[ext_resource path="res://player/idle/idle_0_0_0_0_1_1/0_idle_hero_0_0_0_0_1_1.png" type="Texture" id=139]
+[ext_resource path="res://player/idle/idle_0_1_1_0_1_1/0_idle_hero_0_1_1_0_1_1.png" type="Texture" id=140]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_1/walk_hero_0_0_0_0_0_1_00000.png" type="Texture" id=141]
+[ext_resource path="res://player/idle/idle_0_0_0_1_0_1/0_idle_hero_0_0_0_1_0_1.png" type="Texture" id=142]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_1/walk_hero_0_0_0_0_0_1_00001.png" type="Texture" id=143]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_1/walk_hero_0_0_0_0_0_1_00002.png" type="Texture" id=144]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_1/walk_hero_0_0_0_0_0_1_00005.png" type="Texture" id=145]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_0/walk_hero_0_0_0_0_1_0_00004.png" type="Texture" id=146]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_0/walk_hero_0_0_0_0_1_0_00005.png" type="Texture" id=147]
+[ext_resource path="res://player/idle/idle_0_1_0_0_0_0/0_idle_hero_0_1_0_0_0_0.png" type="Texture" id=148]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_0/walk_hero_0_0_0_0_1_0_00002.png" type="Texture" id=149]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_1/walk_hero_0_0_0_0_1_1_00000.png" type="Texture" id=150]
+[ext_resource path="res://player/idle/idle_0_0_1_0_0_1/0_idle_hero_0_0_1_0_0_1.png" type="Texture" id=151]
+[ext_resource path="res://player/idle/idle_0_0_1_0_1_1/0_idle_hero_0_0_1_0_1_1.png" type="Texture" id=152]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_1/walk_hero_0_0_0_0_0_1_00003.png" type="Texture" id=153]
+[ext_resource path="res://player/idle/idle_1_0_1_0_0_0/0_idle_hero_1_0_1_0_0_0.png" type="Texture" id=154]
+[ext_resource path="res://player/idle/idle_0_0_1_0_1_0/0_idle_hero_0_0_1_0_1_0.png" type="Texture" id=155]
+[ext_resource path="res://player/idle/idle_0_1_1_0_0_0/0_idle_hero_0_1_1_0_0_0.png" type="Texture" id=156]
+[ext_resource path="res://player/idle/idle_0_1_0_1_0_0/0_idle_hero_0_1_0_1_0_0.png" type="Texture" id=157]
+[ext_resource path="res://player/idle/idle_0_0_1_0_0_0/0_idle_hero_0_0_1_0_0_0.png" type="Texture" id=158]
+[ext_resource path="res://player/idle/idle_0_1_1_1_0_1/0_idle_hero_0_1_1_1_0_1.png" type="Texture" id=159]
+[ext_resource path="res://player/idle/idle_0_0_0_1_0_0/0_idle_hero_0_0_0_1_0_0.png" type="Texture" id=160]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_1/walk_hero_0_0_0_0_0_1_00004.png" type="Texture" id=161]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_1/walk_hero_0_0_0_0_0_1_00006.png" type="Texture" id=162]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_0_1/walk_hero_0_0_0_0_0_1_00008.png" type="Texture" id=163]
+[ext_resource path="res://player/idle/idle_1_0_0_1_0_0/0_idle_hero_1_0_0_1_0_0.png" type="Texture" id=164]
+[ext_resource path="res://player/idle/idle_1_0_0_0_1_0/0_idle_hero_1_0_0_0_1_0.png" type="Texture" id=165]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_1/walk_hero_0_0_0_0_1_1_00003.png" type="Texture" id=166]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_1/walk_hero_0_0_0_0_1_1_00002.png" type="Texture" id=167]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_1/walk_hero_0_0_0_0_1_1_00004.png" type="Texture" id=168]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_1/walk_hero_0_0_0_0_1_1_00001.png" type="Texture" id=169]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_1/walk_hero_0_0_0_0_1_1_00005.png" type="Texture" id=170]
+[ext_resource path="res://player/walk_anims/move_0_0_0_0_1_1/walk_hero_0_0_0_0_1_1_00006.png" type="Texture" id=171]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_1/walk_hero_1_0_0_0_1_1_00007.png" type="Texture" id=172]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_0/walk_hero_0_1_1_1_1_0_00000.png" type="Texture" id=173]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_1/walk_hero_1_0_0_0_1_1_00000.png" type="Texture" id=174]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_1/walk_hero_0_1_1_1_1_1_00000.png" type="Texture" id=175]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_1/walk_hero_1_0_0_0_0_1_00006.png" type="Texture" id=176]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_0/walk_hero_0_1_1_1_1_0_00003.png" type="Texture" id=177]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_0/walk_hero_0_1_1_1_1_0_00007.png" type="Texture" id=178]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_1/walk_hero_1_0_0_0_0_1_00005.png" type="Texture" id=179]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_1/walk_hero_1_0_0_0_1_1_00008.png" type="Texture" id=180]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_1/walk_hero_1_0_0_0_1_1_00009.png" type="Texture" id=181]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_1/walk_hero_1_0_0_0_1_1_00006.png" type="Texture" id=182]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_1/walk_hero_1_0_0_0_0_1_00001.png" type="Texture" id=183]
+[ext_resource path="res://player/walk_anims/move_1_0_0_1_0_0/walk_hero_1_0_0_1_0_0_00000.png" type="Texture" id=184]
+[ext_resource path="res://player/walk_anims/move_1_0_0_1_0_0/walk_hero_1_0_0_1_0_0_00001.png" type="Texture" id=185]
+[ext_resource path="res://player/walk_anims/move_1_0_0_1_0_0/walk_hero_1_0_0_1_0_0_00002.png" type="Texture" id=186]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_1/walk_hero_0_1_1_1_1_1_00004.png" type="Texture" id=187]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_0/walk_hero_0_1_1_1_1_0_00009.png" type="Texture" id=188]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_1/walk_hero_1_0_0_0_0_1_00000.png" type="Texture" id=189]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_1/walk_hero_1_0_0_0_0_1_00004.png" type="Texture" id=190]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_1/walk_hero_0_1_1_1_1_1_00005.png" type="Texture" id=191]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_1/walk_hero_0_1_1_1_1_1_00007.png" type="Texture" id=192]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_1/walk_hero_0_1_1_1_1_1_00009.png" type="Texture" id=193]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_1/walk_hero_1_0_0_0_0_1_00008.png" type="Texture" id=194]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_0/walk_hero_0_1_1_1_1_0_00001.png" type="Texture" id=195]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_1/walk_hero_0_1_1_1_1_1_00003.png" type="Texture" id=196]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_1/walk_hero_1_0_0_0_0_1_00007.png" type="Texture" id=197]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_0/walk_hero_1_0_0_0_1_0_00000.png" type="Texture" id=198]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_1/walk_hero_0_1_1_1_0_1_00009.png" type="Texture" id=199]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_0/walk_hero_0_1_1_1_1_0_00002.png" type="Texture" id=200]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_1/walk_hero_0_1_1_1_1_1_00001.png" type="Texture" id=201]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_1/walk_hero_1_0_0_0_0_1_00009.png" type="Texture" id=202]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_0/walk_hero_1_0_0_0_1_0_00002.png" type="Texture" id=203]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_1/walk_hero_0_1_1_1_1_1_00008.png" type="Texture" id=204]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_0/walk_hero_1_0_0_0_1_0_00003.png" type="Texture" id=205]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_0/walk_hero_1_0_0_0_1_0_00004.png" type="Texture" id=206]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_0/walk_hero_1_0_0_0_1_0_00005.png" type="Texture" id=207]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_0/walk_hero_1_0_0_0_1_0_00006.png" type="Texture" id=208]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_0/walk_hero_0_1_1_1_1_0_00004.png" type="Texture" id=209]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_0/walk_hero_0_1_1_1_1_0_00006.png" type="Texture" id=210]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_1/walk_hero_0_1_1_1_1_1_00002.png" type="Texture" id=211]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_0/walk_hero_0_1_1_1_1_0_00005.png" type="Texture" id=212]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_1/walk_hero_0_1_1_1_1_1_00006.png" type="Texture" id=213]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_1_0/walk_hero_0_1_1_1_1_0_00008.png" type="Texture" id=214]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_0/walk_hero_1_0_0_0_1_0_00001.png" type="Texture" id=215]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_0/walk_hero_1_0_0_0_1_0_00008.png" type="Texture" id=216]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_0/walk_hero_1_0_0_0_1_0_00009.png" type="Texture" id=217]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_1/walk_hero_1_0_0_0_1_1_00001.png" type="Texture" id=218]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_1/walk_hero_1_0_0_0_1_1_00002.png" type="Texture" id=219]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_1/walk_hero_1_0_0_0_0_1_00003.png" type="Texture" id=220]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_1/walk_hero_1_0_0_0_1_1_00003.png" type="Texture" id=221]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_1/walk_hero_1_0_0_0_1_1_00004.png" type="Texture" id=222]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_1/walk_hero_1_0_0_0_1_1_00005.png" type="Texture" id=223]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_1_0/walk_hero_1_0_0_0_1_0_00007.png" type="Texture" id=224]
+[ext_resource path="res://player/walk_anims/move_1_0_0_0_0_1/walk_hero_1_0_0_0_0_1_00002.png" type="Texture" id=225]
+[ext_resource path="res://player/walk_anims/move_1_0_0_1_0_0/walk_hero_1_0_0_1_0_0_00006.png" type="Texture" id=226]
+[ext_resource path="res://player/walk_anims/move_1_0_0_1_0_0/walk_hero_1_0_0_1_0_0_00004.png" type="Texture" id=227]
+[ext_resource path="res://player/walk_anims/move_1_0_0_1_0_0/walk_hero_1_0_0_1_0_0_00007.png" type="Texture" id=228]
+[ext_resource path="res://player/walk_anims/move_1_0_0_1_0_0/walk_hero_1_0_0_1_0_0_00003.png" type="Texture" id=229]
+[ext_resource path="res://player/walk_anims/move_1_0_0_1_0_0/walk_hero_1_0_0_1_0_0_00008.png" type="Texture" id=230]
+[ext_resource path="res://player/walk_anims/move_1_0_0_1_0_0/walk_hero_1_0_0_1_0_0_00005.png" type="Texture" id=231]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_1/walk_hero_0_0_1_0_0_1_00005.png" type="Texture" id=232]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_1/walk_hero_0_0_1_0_0_1_00009.png" type="Texture" id=233]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_0_0/walk_hero_0_0_1_1_0_0_00009.png" type="Texture" id=234]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_0/walk_hero_0_1_0_0_0_0_00001.png" type="Texture" id=235]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_1/walk_hero_0_0_1_0_0_1_00007.png" type="Texture" id=236]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_0/walk_hero_0_1_0_0_0_0_00002.png" type="Texture" id=237]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_1_0/walk_hero_0_0_1_0_1_0_00006.png" type="Texture" id=238]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_0_0/walk_hero_0_0_1_1_0_0_00006.png" type="Texture" id=239]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_0/walk_hero_0_1_0_0_0_0_00007.png" type="Texture" id=240]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_1/walk_hero_0_1_0_0_0_1_00007.png" type="Texture" id=241]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_1/walk_hero_0_1_0_0_0_1_00008.png" type="Texture" id=242]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_1/walk_hero_0_1_0_0_0_1_00009.png" type="Texture" id=243]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_1_1/walk_hero_0_1_0_0_1_1_00000.png" type="Texture" id=244]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_1_1/walk_hero_0_1_0_0_1_1_00002.png" type="Texture" id=245]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_1/walk_hero_0_0_1_0_0_1_00008.png" type="Texture" id=246]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_0/walk_hero_0_0_1_0_0_0_00009.png" type="Texture" id=247]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_1_0/walk_hero_0_0_1_0_1_0_00005.png" type="Texture" id=248]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_1_1/walk_hero_0_0_1_1_1_1_00004.png" type="Texture" id=249]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_0/walk_hero_0_1_0_0_0_0_00006.png" type="Texture" id=250]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_1/walk_hero_0_1_0_0_0_1_00000.png" type="Texture" id=251]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_1/walk_hero_0_0_1_0_0_1_00001.png" type="Texture" id=252]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_1_0/walk_hero_0_0_1_0_1_0_00002.png" type="Texture" id=253]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_1_0/walk_hero_0_0_1_0_1_0_00007.png" type="Texture" id=254]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_1_0/walk_hero_0_0_1_0_1_0_00008.png" type="Texture" id=255]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_0_0/walk_hero_0_0_1_1_0_0_00002.png" type="Texture" id=256]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_0_0/walk_hero_0_0_1_1_0_0_00001.png" type="Texture" id=257]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_1_1/walk_hero_0_0_1_1_1_1_00000.png" type="Texture" id=258]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_0/walk_hero_0_1_0_0_0_0_00003.png" type="Texture" id=259]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_1_1/walk_hero_0_0_1_1_1_1_00006.png" type="Texture" id=260]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_0_0/walk_hero_0_0_1_1_0_0_00008.png" type="Texture" id=261]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_1_1/walk_hero_0_0_1_1_1_1_00009.png" type="Texture" id=262]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_0/walk_hero_0_1_0_0_0_0_00008.png" type="Texture" id=263]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_1_0/walk_hero_0_0_1_0_1_0_00000.png" type="Texture" id=264]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_1/walk_hero_0_0_1_0_0_1_00000.png" type="Texture" id=265]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_1/walk_hero_0_0_1_0_0_1_00006.png" type="Texture" id=266]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_1_0/walk_hero_0_0_1_0_1_0_00004.png" type="Texture" id=267]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_0_0/walk_hero_0_0_1_1_0_0_00000.png" type="Texture" id=268]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_1_1/walk_hero_0_0_1_1_1_1_00002.png" type="Texture" id=269]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_1_1/walk_hero_0_0_1_1_1_1_00005.png" type="Texture" id=270]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_0_0/walk_hero_0_0_1_1_0_0_00007.png" type="Texture" id=271]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_1_1/walk_hero_0_0_1_1_1_1_00007.png" type="Texture" id=272]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_1/walk_hero_0_0_1_0_0_1_00002.png" type="Texture" id=273]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_1/walk_hero_0_0_1_0_0_1_00003.png" type="Texture" id=274]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_1/walk_hero_0_0_1_0_0_1_00004.png" type="Texture" id=275]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_0_0/walk_hero_0_0_1_1_0_0_00005.png" type="Texture" id=276]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_1_1/walk_hero_0_0_1_1_1_1_00003.png" type="Texture" id=277]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_0/walk_hero_0_1_0_0_0_0_00000.png" type="Texture" id=278]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_1_1/walk_hero_0_0_1_1_1_1_00001.png" type="Texture" id=279]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_1_0/walk_hero_0_0_1_0_1_0_00003.png" type="Texture" id=280]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_1/walk_hero_0_1_0_0_0_1_00002.png" type="Texture" id=281]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_1/walk_hero_0_1_0_0_0_1_00003.png" type="Texture" id=282]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_1/walk_hero_0_1_0_0_0_1_00005.png" type="Texture" id=283]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_1_1/walk_hero_0_0_1_1_1_1_00008.png" type="Texture" id=284]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_0_0/walk_hero_0_0_1_1_0_0_00003.png" type="Texture" id=285]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_0/walk_hero_0_1_0_0_0_0_00004.png" type="Texture" id=286]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_1/walk_hero_0_1_0_0_0_1_00006.png" type="Texture" id=287]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_0/walk_hero_0_1_0_0_0_0_00005.png" type="Texture" id=288]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_1_1/walk_hero_0_1_0_0_1_1_00001.png" type="Texture" id=289]
+[ext_resource path="res://player/walk_anims/move_0_0_1_1_0_0/walk_hero_0_0_1_1_0_0_00004.png" type="Texture" id=290]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_1/walk_hero_0_1_0_0_0_1_00001.png" type="Texture" id=291]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_0/walk_hero_0_1_0_0_0_0_00009.png" type="Texture" id=292]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_0_1/walk_hero_0_1_0_0_0_1_00004.png" type="Texture" id=293]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_1_0/walk_hero_0_0_1_0_1_0_00001.png" type="Texture" id=294]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_1_0/walk_hero_0_0_1_0_1_0_00009.png" type="Texture" id=295]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_1_1/walk_hero_0_1_0_0_1_1_00004.png" type="Texture" id=296]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_1_1/walk_hero_0_1_0_0_1_1_00005.png" type="Texture" id=297]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_1_1/walk_hero_0_1_0_0_1_1_00006.png" type="Texture" id=298]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_1_1/walk_hero_0_1_0_0_1_1_00007.png" type="Texture" id=299]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_1_1/walk_hero_0_1_0_0_1_1_00008.png" type="Texture" id=300]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_1_1/walk_hero_0_1_0_0_1_1_00003.png" type="Texture" id=301]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_1/walk_hero_0_1_1_1_0_1_00003.png" type="Texture" id=302]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_0/walk_hero_0_1_1_1_0_0_00006.png" type="Texture" id=303]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_1/walk_hero_0_1_1_1_0_1_00007.png" type="Texture" id=304]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_0/walk_hero_0_1_1_1_0_0_00001.png" type="Texture" id=305]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00009.png" type="Texture" id=306]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_1_1/walk_hero_0_1_1_0_1_1_00002.png" type="Texture" id=307]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_1/walk_hero_0_1_1_1_0_1_00008.png" type="Texture" id=308]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_1_1/walk_hero_0_1_1_0_1_1_00003.png" type="Texture" id=309]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_1_1/walk_hero_0_1_1_0_1_1_00006.png" type="Texture" id=310]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_0/walk_hero_0_1_1_1_0_0_00002.png" type="Texture" id=311]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_1_1/walk_hero_0_1_1_0_1_1_00000.png" type="Texture" id=312]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00005.png" type="Texture" id=313]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_1_1/walk_hero_0_1_1_0_1_1_00005.png" type="Texture" id=314]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_1_1/walk_hero_0_1_1_0_1_1_00009.png" type="Texture" id=315]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_0/walk_hero_0_1_1_1_0_0_00003.png" type="Texture" id=316]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_0/walk_hero_0_1_1_1_0_0_00004.png" type="Texture" id=317]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_1_1/walk_hero_0_1_1_0_1_1_00004.png" type="Texture" id=318]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_0/walk_hero_0_1_1_1_0_0_00005.png" type="Texture" id=319]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_1/walk_hero_0_1_1_1_0_1_00000.png" type="Texture" id=320]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_1/walk_hero_0_1_1_1_0_1_00001.png" type="Texture" id=321]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_0/walk_hero_0_1_1_1_0_0_00007.png" type="Texture" id=322]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_1/walk_hero_0_1_1_1_0_1_00002.png" type="Texture" id=323]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00007.png" type="Texture" id=324]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_0/walk_hero_0_1_1_1_0_0_00000.png" type="Texture" id=325]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_0/walk_hero_0_1_1_1_0_0_00009.png" type="Texture" id=326]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_1/walk_hero_0_1_1_1_0_1_00004.png" type="Texture" id=327]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_1/walk_hero_0_1_1_1_0_1_00005.png" type="Texture" id=328]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_1/walk_hero_0_1_1_1_0_1_00006.png" type="Texture" id=329]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00006.png" type="Texture" id=330]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_1_1/walk_hero_0_1_1_0_1_1_00001.png" type="Texture" id=331]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_1_1/walk_hero_0_1_1_0_1_1_00007.png" type="Texture" id=332]
+[ext_resource path="res://player/walk_anims/move_0_1_1_1_0_0/walk_hero_0_1_1_1_0_0_00008.png" type="Texture" id=333]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00008.png" type="Texture" id=334]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_1_1/walk_hero_0_1_1_0_1_1_00008.png" type="Texture" id=335]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00004.png" type="Texture" id=336]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_1/walk_hero_0_0_0_1_1_1_00004.png" type="Texture" id=337]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_0/walk_hero_0_0_0_1_0_0_00004.png" type="Texture" id=338]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_0/walk_hero_0_0_0_1_0_0_00007.png" type="Texture" id=339]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_0/walk_hero_0_0_0_1_0_0_00009.png" type="Texture" id=340]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_1/walk_hero_0_0_0_1_0_1_00004.png" type="Texture" id=341]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_1/walk_hero_0_0_0_1_0_1_00006.png" type="Texture" id=342]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_1/walk_hero_0_0_0_1_0_1_00009.png" type="Texture" id=343]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_1/walk_hero_0_0_0_1_1_1_00005.png" type="Texture" id=344]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_0/walk_hero_0_0_1_0_0_0_00001.png" type="Texture" id=345]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_1/walk_hero_0_0_0_1_1_1_00002.png" type="Texture" id=346]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_1/walk_hero_0_0_0_1_0_1_00008.png" type="Texture" id=347]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_0/walk_hero_0_0_1_0_0_0_00000.png" type="Texture" id=348]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_1/walk_hero_0_0_0_1_1_1_00000.png" type="Texture" id=349]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_0/walk_hero_0_0_1_0_0_0_00003.png" type="Texture" id=350]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_1/walk_hero_0_0_0_1_1_1_00008.png" type="Texture" id=351]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_0/walk_hero_0_0_0_1_0_0_00005.png" type="Texture" id=352]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_0/walk_hero_0_0_1_0_0_0_00004.png" type="Texture" id=353]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_1/walk_hero_0_0_0_1_1_1_00003.png" type="Texture" id=354]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_1/walk_hero_0_0_0_1_1_1_00009.png" type="Texture" id=355]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_0/walk_hero_0_0_1_0_0_0_00006.png" type="Texture" id=356]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_1/walk_hero_0_0_0_1_0_1_00001.png" type="Texture" id=357]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_0/walk_hero_0_0_0_1_0_0_00008.png" type="Texture" id=358]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_1/walk_hero_0_0_0_1_0_1_00005.png" type="Texture" id=359]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_0/walk_hero_0_0_1_0_0_0_00007.png" type="Texture" id=360]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_0/walk_hero_0_0_1_0_0_0_00008.png" type="Texture" id=361]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_0/walk_hero_0_0_0_1_0_0_00006.png" type="Texture" id=362]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_1/walk_hero_0_0_0_1_0_1_00002.png" type="Texture" id=363]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_1/walk_hero_0_0_0_1_0_1_00000.png" type="Texture" id=364]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_1/walk_hero_0_0_0_1_0_1_00007.png" type="Texture" id=365]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_1/walk_hero_0_0_0_1_1_1_00001.png" type="Texture" id=366]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_1/walk_hero_0_0_0_1_1_1_00006.png" type="Texture" id=367]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_0/walk_hero_0_0_1_0_0_0_00005.png" type="Texture" id=368]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_1/walk_hero_0_0_0_1_1_1_00007.png" type="Texture" id=369]
+[ext_resource path="res://player/walk_anims/move_0_0_1_0_0_0/walk_hero_0_0_1_0_0_0_00002.png" type="Texture" id=370]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_0_1/walk_hero_0_0_0_1_0_1_00003.png" type="Texture" id=371]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_1/walk_hero_0_1_0_1_0_1_00005.png" type="Texture" id=372]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_0/walk_hero_0_1_0_1_0_0_00003.png" type="Texture" id=373]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_1_1/walk_hero_0_1_0_1_1_1_00000.png" type="Texture" id=374]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_1_1/walk_hero_0_1_0_1_1_1_00003.png" type="Texture" id=375]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_1_1/walk_hero_0_1_0_1_1_1_00002.png" type="Texture" id=376]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_1_1/walk_hero_0_1_0_1_1_1_00006.png" type="Texture" id=377]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_0/walk_hero_0_1_0_1_0_0_00005.png" type="Texture" id=378]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_1_1/walk_hero_0_1_0_1_1_1_00009.png" type="Texture" id=379]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_1/walk_hero_0_1_0_1_0_1_00000.png" type="Texture" id=380]
+[ext_resource path="res://player/walk_anims/move_0_1_0_0_1_1/walk_hero_0_1_0_0_1_1_00009.png" type="Texture" id=381]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_0/walk_hero_0_1_0_1_0_0_00008.png" type="Texture" id=382]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_1/walk_hero_0_1_0_1_0_1_00002.png" type="Texture" id=383]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_1/walk_hero_0_1_0_1_0_1_00007.png" type="Texture" id=384]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_1_1/walk_hero_0_1_0_1_1_1_00001.png" type="Texture" id=385]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_1_1/walk_hero_0_1_0_1_1_1_00007.png" type="Texture" id=386]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00003.png" type="Texture" id=387]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_1/walk_hero_0_1_0_1_0_1_00004.png" type="Texture" id=388]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_1/walk_hero_0_1_0_1_0_1_00009.png" type="Texture" id=389]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_1_1/walk_hero_0_1_0_1_1_1_00005.png" type="Texture" id=390]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_0/walk_hero_0_1_0_1_0_0_00006.png" type="Texture" id=391]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00001.png" type="Texture" id=392]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_0/walk_hero_0_1_0_1_0_0_00001.png" type="Texture" id=393]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_0/walk_hero_0_1_0_1_0_0_00004.png" type="Texture" id=394]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_1_1/walk_hero_0_1_0_1_1_1_00004.png" type="Texture" id=395]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_1_1/walk_hero_0_1_0_1_1_1_00008.png" type="Texture" id=396]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_1/walk_hero_0_1_0_1_0_1_00006.png" type="Texture" id=397]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_1/walk_hero_0_1_0_1_0_1_00008.png" type="Texture" id=398]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_0/walk_hero_0_1_0_1_0_0_00007.png" type="Texture" id=399]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00000.png" type="Texture" id=400]
+[ext_resource path="res://player/walk_anims/move_0_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00002.png" type="Texture" id=401]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_0/walk_hero_0_1_0_1_0_0_00002.png" type="Texture" id=402]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_0/walk_hero_0_1_0_1_0_0_00009.png" type="Texture" id=403]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_1/walk_hero_0_1_0_1_0_1_00003.png" type="Texture" id=404]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_0/walk_hero_0_1_0_1_0_0_00000.png" type="Texture" id=405]
+[ext_resource path="res://player/walk_anims/move_0_1_0_1_0_1/walk_hero_0_1_0_1_0_1_00001.png" type="Texture" id=406]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_0/walk_hero_1_1_1_0_0_0_00005.png" type="Texture" id=407]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_0/walk_hero_1_1_1_0_1_0_00006.png" type="Texture" id=408]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_0/walk_hero_1_1_1_0_1_0_00005.png" type="Texture" id=409]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_0/walk_hero_1_1_1_1_0_0_00000.png" type="Texture" id=410]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_0/walk_hero_1_1_1_1_0_0_00003.png" type="Texture" id=411]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_1/walk_hero_1_1_1_1_0_1_00005.png" type="Texture" id=412]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_0/walk_hero_1_1_1_0_1_0_00001.png" type="Texture" id=413]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_1/walk_hero_1_1_1_1_0_1_00006.png" type="Texture" id=414]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_0/walk_hero_1_1_1_1_1_0_00006.png" type="Texture" id=415]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_0/walk_hero_1_1_1_0_1_0_00000.png" type="Texture" id=416]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_0/walk_hero_1_1_1_1_0_0_00008.png" type="Texture" id=417]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_0/walk_hero_1_1_1_0_0_0_00002.png" type="Texture" id=418]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_0/walk_hero_1_1_1_0_1_0_00009.png" type="Texture" id=419]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_0/walk_hero_1_1_1_0_1_0_00003.png" type="Texture" id=420]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_0/walk_hero_1_1_1_0_0_0_00007.png" type="Texture" id=421]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_1_1/walk_hero_1_1_0_1_1_1_00008.png" type="Texture" id=422]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_1_1/walk_hero_1_1_0_1_1_1_00007.png" type="Texture" id=423]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_1/walk_hero_1_1_1_0_1_1_00005.png" type="Texture" id=424]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_1/walk_hero_1_1_1_0_1_1_00003.png" type="Texture" id=425]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_0/walk_hero_1_1_1_1_0_0_00005.png" type="Texture" id=426]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_1/walk_hero_1_1_1_1_0_1_00001.png" type="Texture" id=427]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_0/walk_hero_1_1_1_1_0_0_00004.png" type="Texture" id=428]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_1/walk_hero_1_1_1_0_1_1_00006.png" type="Texture" id=429]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_1/walk_hero_1_1_1_0_1_1_00007.png" type="Texture" id=430]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_1/walk_hero_1_1_1_1_0_1_00002.png" type="Texture" id=431]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_1/walk_hero_1_1_1_0_1_1_00002.png" type="Texture" id=432]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_1/walk_hero_1_1_1_1_0_1_00004.png" type="Texture" id=433]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_1/walk_hero_1_1_1_1_0_1_00008.png" type="Texture" id=434]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_0/walk_hero_1_1_1_1_1_0_00002.png" type="Texture" id=435]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_0/walk_hero_1_1_1_0_0_0_00001.png" type="Texture" id=436]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_0/walk_hero_1_1_1_0_1_0_00007.png" type="Texture" id=437]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_0/walk_hero_1_1_1_1_1_0_00007.png" type="Texture" id=438]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_1/walk_hero_1_1_1_0_1_1_00001.png" type="Texture" id=439]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_0/walk_hero_1_1_1_1_0_0_00006.png" type="Texture" id=440]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_1_1/walk_hero_1_1_0_1_1_1_00006.png" type="Texture" id=441]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_0/walk_hero_1_1_1_1_1_0_00000.png" type="Texture" id=442]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_0/walk_hero_1_1_1_1_1_0_00005.png" type="Texture" id=443]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_0/walk_hero_1_1_1_0_0_0_00004.png" type="Texture" id=444]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_1/walk_hero_1_1_1_0_1_1_00008.png" type="Texture" id=445]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_0/walk_hero_1_1_1_1_0_0_00001.png" type="Texture" id=446]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_0/walk_hero_1_1_1_0_0_0_00008.png" type="Texture" id=447]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_1/walk_hero_1_1_1_0_1_1_00009.png" type="Texture" id=448]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_1/walk_hero_1_1_1_0_1_1_00004.png" type="Texture" id=449]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_0/walk_hero_1_1_1_1_0_0_00002.png" type="Texture" id=450]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_0/walk_hero_1_1_1_1_0_0_00007.png" type="Texture" id=451]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_1/walk_hero_1_1_1_0_1_1_00000.png" type="Texture" id=452]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_1/walk_hero_1_1_1_1_0_1_00009.png" type="Texture" id=453]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_0/walk_hero_1_1_1_1_1_0_00001.png" type="Texture" id=454]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_1/walk_hero_1_1_1_1_0_1_00003.png" type="Texture" id=455]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_1/walk_hero_1_1_1_1_0_1_00007.png" type="Texture" id=456]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_0/walk_hero_1_1_1_1_1_0_00004.png" type="Texture" id=457]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_0/walk_hero_1_1_1_1_1_0_00008.png" type="Texture" id=458]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_0/walk_hero_1_1_1_1_1_0_00003.png" type="Texture" id=459]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_1_0/walk_hero_1_1_1_1_1_0_00009.png" type="Texture" id=460]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_0/walk_hero_1_1_1_1_0_0_00009.png" type="Texture" id=461]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_0/walk_hero_1_1_1_0_0_0_00006.png" type="Texture" id=462]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_0/walk_hero_1_1_1_0_1_0_00002.png" type="Texture" id=463]
+[ext_resource path="res://player/walk_anims/move_1_1_1_1_0_1/walk_hero_1_1_1_1_0_1_00000.png" type="Texture" id=464]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_0/walk_hero_1_1_1_0_0_0_00003.png" type="Texture" id=465]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_0/walk_hero_1_1_1_0_1_0_00008.png" type="Texture" id=466]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_1_0/walk_hero_1_1_1_0_1_0_00004.png" type="Texture" id=467]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_0/walk_hero_1_1_1_0_0_0_00009.png" type="Texture" id=468]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_0/walk_hero_1_1_1_0_0_0_00000.png" type="Texture" id=469]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_1_1/walk_hero_1_1_0_1_1_1_00009.png" type="Texture" id=470]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_0/walk_hero_1_0_1_0_1_0_00005.png" type="Texture" id=471]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_0_0/walk_hero_1_0_1_0_0_0_00004.png" type="Texture" id=472]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_1/walk_hero_1_0_1_0_1_1_00000.png" type="Texture" id=473]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_0/walk_hero_1_0_1_0_1_0_00004.png" type="Texture" id=474]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_1/walk_hero_1_0_1_0_1_1_00005.png" type="Texture" id=475]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_1/walk_hero_1_0_1_0_1_1_00009.png" type="Texture" id=476]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_1/walk_hero_1_0_1_0_1_1_00003.png" type="Texture" id=477]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_0/walk_hero_1_0_1_0_1_0_00009.png" type="Texture" id=478]
+[ext_resource path="res://player/walk_anims/move_1_0_1_1_1_1/walk_hero_1_0_1_1_1_1_00001.png" type="Texture" id=479]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_1/walk_hero_1_0_1_0_1_1_00008.png" type="Texture" id=480]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_0_0/walk_hero_1_0_1_0_0_0_00005.png" type="Texture" id=481]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_0_0/walk_hero_1_0_1_0_0_0_00006.png" type="Texture" id=482]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_0/walk_hero_1_0_1_0_1_0_00007.png" type="Texture" id=483]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_0_0/walk_hero_1_0_1_0_0_0_00000.png" type="Texture" id=484]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_1/walk_hero_1_0_1_0_1_1_00004.png" type="Texture" id=485]
+[ext_resource path="res://player/walk_anims/move_1_0_1_1_1_1/walk_hero_1_0_1_1_1_1_00009.png" type="Texture" id=486]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_1/walk_hero_1_1_0_0_0_1_00000.png" type="Texture" id=487]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_1/walk_hero_1_0_1_0_1_1_00006.png" type="Texture" id=488]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_1/walk_hero_1_1_0_0_0_1_00005.png" type="Texture" id=489]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_1/walk_hero_1_1_0_0_0_1_00009.png" type="Texture" id=490]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_0_0/walk_hero_1_0_1_0_0_0_00001.png" type="Texture" id=491]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_1/walk_hero_1_0_1_0_1_1_00001.png" type="Texture" id=492]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_1/walk_hero_1_1_0_0_0_1_00004.png" type="Texture" id=493]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_1/walk_hero_1_1_0_0_0_1_00003.png" type="Texture" id=494]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_0_1/walk_hero_1_1_0_1_0_1_00000.png" type="Texture" id=495]
+[ext_resource path="res://player/walk_anims/move_1_0_1_1_1_1/walk_hero_1_0_1_1_1_1_00002.png" type="Texture" id=496]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_0_1/walk_hero_1_1_0_1_0_1_00001.png" type="Texture" id=497]
+[ext_resource path="res://player/walk_anims/move_1_0_1_1_1_1/walk_hero_1_0_1_1_1_1_00008.png" type="Texture" id=498]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_0_1/walk_hero_1_1_0_1_0_1_00002.png" type="Texture" id=499]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_0_0/walk_hero_1_0_1_0_0_0_00003.png" type="Texture" id=500]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_0/walk_hero_1_0_1_0_1_0_00000.png" type="Texture" id=501]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_0/walk_hero_1_0_1_0_1_0_00002.png" type="Texture" id=502]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_0/walk_hero_1_0_1_0_1_0_00006.png" type="Texture" id=503]
+[ext_resource path="res://player/walk_anims/move_1_0_1_1_1_1/walk_hero_1_0_1_1_1_1_00004.png" type="Texture" id=504]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_0/walk_hero_1_0_1_0_1_0_00003.png" type="Texture" id=505]
+[ext_resource path="res://player/walk_anims/move_1_0_0_1_0_0/walk_hero_1_0_0_1_0_0_00009.png" type="Texture" id=506]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_0_0/walk_hero_1_0_1_0_0_0_00007.png" type="Texture" id=507]
+[ext_resource path="res://player/walk_anims/move_1_0_1_1_1_1/walk_hero_1_0_1_1_1_1_00000.png" type="Texture" id=508]
+[ext_resource path="res://player/walk_anims/move_1_0_1_1_1_1/walk_hero_1_0_1_1_1_1_00007.png" type="Texture" id=509]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_0/walk_hero_1_0_1_0_1_0_00001.png" type="Texture" id=510]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_0_0/walk_hero_1_0_1_0_0_0_00008.png" type="Texture" id=511]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_0/walk_hero_1_0_1_0_1_0_00008.png" type="Texture" id=512]
+[ext_resource path="res://player/walk_anims/move_1_0_1_1_1_1/walk_hero_1_0_1_1_1_1_00005.png" type="Texture" id=513]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_1/walk_hero_1_1_0_0_0_1_00006.png" type="Texture" id=514]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_1/walk_hero_1_1_0_0_0_1_00007.png" type="Texture" id=515]
+[ext_resource path="res://player/walk_anims/move_1_0_1_1_1_1/walk_hero_1_0_1_1_1_1_00006.png" type="Texture" id=516]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_1/walk_hero_1_0_1_0_1_1_00002.png" type="Texture" id=517]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_1/walk_hero_1_1_0_0_0_1_00002.png" type="Texture" id=518]
+[ext_resource path="res://player/walk_anims/move_1_0_1_1_1_1/walk_hero_1_0_1_1_1_1_00003.png" type="Texture" id=519]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_1/walk_hero_1_1_0_0_0_1_00008.png" type="Texture" id=520]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_0_0/walk_hero_1_0_1_0_0_0_00002.png" type="Texture" id=521]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_0_0/walk_hero_1_0_1_0_0_0_00009.png" type="Texture" id=522]
+[ext_resource path="res://player/walk_anims/move_1_0_1_0_1_1/walk_hero_1_0_1_0_1_1_00007.png" type="Texture" id=523]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_1/walk_hero_1_1_0_0_0_1_00001.png" type="Texture" id=524]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_0_1/walk_hero_1_1_0_1_0_1_00007.png" type="Texture" id=525]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_1_1/walk_hero_1_1_0_1_1_1_00002.png" type="Texture" id=526]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_1_1/walk_hero_1_1_0_1_1_1_00001.png" type="Texture" id=527]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_1_1/walk_hero_1_1_0_1_1_1_00003.png" type="Texture" id=528]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_0_1/walk_hero_1_1_0_1_0_1_00009.png" type="Texture" id=529]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_0_1/walk_hero_1_1_0_1_0_1_00005.png" type="Texture" id=530]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_0_1/walk_hero_1_1_0_1_0_1_00003.png" type="Texture" id=531]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_0_1/walk_hero_1_1_0_1_0_1_00004.png" type="Texture" id=532]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_0_1/walk_hero_1_1_0_1_0_1_00008.png" type="Texture" id=533]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_1_1/walk_hero_1_1_0_1_1_1_00000.png" type="Texture" id=534]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_1_1/walk_hero_1_1_0_1_1_1_00004.png" type="Texture" id=535]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_1_1/walk_hero_1_1_0_1_1_1_00005.png" type="Texture" id=536]
+[ext_resource path="res://player/walk_anims/move_1_1_0_1_0_1/walk_hero_1_1_0_1_0_1_00006.png" type="Texture" id=537]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00001.png" type="Texture" id=538]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_0_0/walk_hero_1_1_0_0_0_0_00000.png" type="Texture" id=539]
+[ext_resource path="res://player/idle/idle_1_1_0_0_1_1/idle_hero_1_1_0_0_1_1.png" type="Texture" id=540]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_1_1/walk_hero_1_1_0_0_1_1_00007.png" type="Texture" id=541]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_1_1/walk_hero_1_1_0_0_1_1_00005.png" type="Texture" id=542]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_1_1/walk_hero_1_1_0_0_1_1_00009.png" type="Texture" id=543]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_1_1/walk_hero_1_1_0_0_1_1_00006.png" type="Texture" id=544]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_1_1/walk_hero_1_1_0_0_1_1_00004.png" type="Texture" id=545]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_1_1/walk_hero_1_1_0_0_1_1_00003.png" type="Texture" id=546]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_1_1/walk_hero_1_1_0_0_1_1_00002.png" type="Texture" id=547]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_1_1/walk_hero_1_1_0_0_1_1_00000.png" type="Texture" id=548]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_1_1/walk_hero_1_1_0_0_1_1_00001.png" type="Texture" id=549]
+[ext_resource path="res://player/walk_anims/move_1_1_0_0_1_1/walk_hero_1_1_0_0_1_1_00008.png" type="Texture" id=550]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -111,9 +558,189 @@ animations = [ {
 "name": "idle_0_0_0_0_0_0",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 122 ) ],
+"loop": true,
+"name": "idle_0_0_0_0_0_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 127 ) ],
+"loop": true,
+"name": "idle_0_0_0_0_1_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 139 ) ],
+"loop": true,
+"name": "idle_0_0_0_0_1_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 160 ) ],
+"loop": true,
+"name": "idle_0_0_0_1_0_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 142 ) ],
+"loop": true,
+"name": "idle_0_0_0_1_0_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 129 ) ],
+"loop": true,
+"name": "idle_0_0_0_1_1_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 62 ) ],
+"loop": true,
+"name": "idle_0_0_0_1_1_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 158 ) ],
+"loop": true,
+"name": "idle_0_0_1_0_0_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 151 ) ],
+"loop": true,
+"name": "idle_0_0_1_0_0_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 155 ) ],
+"loop": true,
+"name": "idle_0_0_1_0_1_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 152 ) ],
+"loop": true,
+"name": "idle_0_0_1_0_1_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 112 ) ],
+"loop": true,
+"name": "idle_0_0_1_1_0_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 113 ) ],
+"loop": true,
+"name": "idle_0_0_1_1_0_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 119 ) ],
+"loop": true,
+"name": "idle_0_0_1_1_1_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 74 ) ],
+"loop": true,
+"name": "idle_0_0_1_1_1_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 148 ) ],
+"loop": true,
+"name": "idle_0_1_0_0_0_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 128 ) ],
+"loop": true,
+"name": "idle_0_1_0_0_0_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 157 ) ],
+"loop": true,
+"name": "idle_0_1_0_1_0_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 138 ) ],
+"loop": true,
+"name": "idle_0_1_0_1_1_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 120 ) ],
+"loop": true,
+"name": "idle_0_1_0_1_1_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 156 ) ],
+"loop": true,
+"name": "idle_0_1_1_0_0_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 111 ) ],
+"loop": true,
+"name": "idle_0_1_1_0_0_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 140 ) ],
+"loop": true,
+"name": "idle_0_1_1_0_1_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 159 ) ],
+"loop": true,
+"name": "idle_0_1_1_1_0_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 121 ) ],
+"loop": true,
+"name": "idle_0_1_1_1_1_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 115 ) ],
+"loop": true,
+"name": "idle_0_1_1_1_1_1",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 78 ) ],
 "loop": true,
 "name": "idle_1_0_0_0_0_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 136 ) ],
+"loop": true,
+"name": "idle_1_0_0_0_0_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 165 ) ],
+"loop": true,
+"name": "idle_1_0_0_0_1_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 118 ) ],
+"loop": true,
+"name": "idle_1_0_0_0_1_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 164 ) ],
+"loop": true,
+"name": "idle_1_0_0_1_0_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 137 ) ],
+"loop": true,
+"name": "idle_1_0_0_1_0_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 154 ) ],
+"loop": true,
+"name": "idle_1_0_1_0_0_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 123 ) ],
+"loop": true,
+"name": "idle_1_0_1_0_0_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 117 ) ],
+"loop": true,
+"name": "idle_1_0_1_0_1_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 134 ) ],
+"loop": true,
+"name": "idle_1_0_1_0_1_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 116 ) ],
+"loop": true,
+"name": "idle_1_0_1_1_0_0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 103 ) ],
@@ -134,6 +761,11 @@ animations = [ {
 "frames": [ ExtResource( 102 ) ],
 "loop": true,
 "name": "idle_1_1_0_0_0_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 540 ) ],
+"loop": true,
+"name": "idle_1_1_0_0_1_1",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 101 ) ],
@@ -176,24 +808,229 @@ animations = [ {
 "name": "interact_1_1_1_1_1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 69 ), ExtResource( 72 ), ExtResource( 79 ), ExtResource( 73 ), ExtResource( 65 ), ExtResource( 70 ), ExtResource( 67 ), ExtResource( 74 ), ExtResource( 66 ), ExtResource( 63 ) ],
+"frames": [ ExtResource( 63 ), ExtResource( 65 ), ExtResource( 67 ), ExtResource( 71 ), ExtResource( 68 ), ExtResource( 70 ), ExtResource( 66 ), ExtResource( 72 ), ExtResource( 69 ), ExtResource( 73 ) ],
 "loop": true,
 "name": "move_0_0_0_0_0_0",
 "speed": 11.0
 }, {
-"frames": [ ExtResource( 75 ), ExtResource( 83 ), ExtResource( 71 ), ExtResource( 76 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 68 ), ExtResource( 77 ), ExtResource( 82 ), ExtResource( 62 ) ],
+"frames": [ ExtResource( 141 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 153 ), ExtResource( 161 ), ExtResource( 145 ), ExtResource( 162 ), ExtResource( 114 ), ExtResource( 163 ), ExtResource( 124 ) ],
 "loop": true,
-"name": "move_1_0_0_0_0_0",
+"name": "move_0_0_0_0_0_1",
 "speed": 11.0
 }, {
-"frames": [ ExtResource( 90 ), ExtResource( 88 ), ExtResource( 92 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 89 ), ExtResource( 91 ), ExtResource( 86 ), ExtResource( 93 ), ExtResource( 94 ) ],
+"frames": [ ExtResource( 125 ), ExtResource( 126 ), ExtResource( 149 ), ExtResource( 130 ), ExtResource( 146 ), ExtResource( 147 ), ExtResource( 131 ), ExtResource( 132 ), ExtResource( 133 ), ExtResource( 135 ) ],
+"loop": true,
+"name": "move_0_0_0_0_1_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 150 ), ExtResource( 169 ), ExtResource( 167 ), ExtResource( 166 ), ExtResource( 168 ), ExtResource( 170 ), ExtResource( 171 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ) ],
+"loop": true,
+"name": "move_0_0_0_0_1_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 104 ), ExtResource( 110 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 338 ), ExtResource( 352 ), ExtResource( 362 ), ExtResource( 339 ), ExtResource( 358 ), ExtResource( 340 ) ],
+"loop": true,
+"name": "move_0_0_0_1_0_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 364 ), ExtResource( 357 ), ExtResource( 363 ), ExtResource( 371 ), ExtResource( 341 ), ExtResource( 359 ), ExtResource( 342 ), ExtResource( 365 ), ExtResource( 347 ), ExtResource( 343 ) ],
+"loop": true,
+"name": "move_0_0_0_1_0_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 349 ), ExtResource( 366 ), ExtResource( 346 ), ExtResource( 354 ), ExtResource( 337 ), ExtResource( 344 ), ExtResource( 367 ), ExtResource( 369 ), ExtResource( 351 ), ExtResource( 355 ) ],
+"loop": true,
+"name": "move_0_0_0_1_1_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 348 ), ExtResource( 345 ), ExtResource( 370 ), ExtResource( 350 ), ExtResource( 353 ), ExtResource( 368 ), ExtResource( 356 ), ExtResource( 360 ), ExtResource( 361 ), ExtResource( 247 ) ],
+"loop": true,
+"name": "move_0_0_1_0_0_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 265 ), ExtResource( 252 ), ExtResource( 273 ), ExtResource( 274 ), ExtResource( 275 ), ExtResource( 232 ), ExtResource( 266 ), ExtResource( 236 ), ExtResource( 246 ), ExtResource( 233 ) ],
+"loop": true,
+"name": "move_0_0_1_0_0_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 264 ), ExtResource( 294 ), ExtResource( 253 ), ExtResource( 280 ), ExtResource( 267 ), ExtResource( 248 ), ExtResource( 238 ), ExtResource( 254 ), ExtResource( 255 ), ExtResource( 295 ) ],
+"loop": true,
+"name": "move_0_0_1_0_1_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 268 ), ExtResource( 257 ), ExtResource( 256 ), ExtResource( 285 ), ExtResource( 290 ), ExtResource( 276 ), ExtResource( 239 ), ExtResource( 271 ), ExtResource( 261 ), ExtResource( 234 ) ],
+"loop": true,
+"name": "move_0_0_1_1_0_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 258 ), ExtResource( 279 ), ExtResource( 269 ), ExtResource( 277 ), ExtResource( 249 ), ExtResource( 270 ), ExtResource( 260 ), ExtResource( 272 ), ExtResource( 284 ), ExtResource( 262 ) ],
+"loop": true,
+"name": "move_0_0_1_1_1_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 278 ), ExtResource( 235 ), ExtResource( 237 ), ExtResource( 259 ), ExtResource( 286 ), ExtResource( 288 ), ExtResource( 250 ), ExtResource( 240 ), ExtResource( 263 ), ExtResource( 292 ) ],
+"loop": true,
+"name": "move_0_1_0_0_0_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 251 ), ExtResource( 291 ), ExtResource( 281 ), ExtResource( 282 ), ExtResource( 293 ), ExtResource( 283 ), ExtResource( 287 ), ExtResource( 241 ), ExtResource( 242 ), ExtResource( 243 ) ],
+"loop": true,
+"name": "move_0_1_0_0_0_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 244 ), ExtResource( 289 ), ExtResource( 245 ), ExtResource( 301 ), ExtResource( 296 ), ExtResource( 297 ), ExtResource( 298 ), ExtResource( 299 ), ExtResource( 300 ), ExtResource( 381 ) ],
+"loop": true,
+"name": "move_0_1_0_0_1_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 405 ), ExtResource( 393 ), ExtResource( 402 ), ExtResource( 373 ), ExtResource( 394 ), ExtResource( 378 ), ExtResource( 391 ), ExtResource( 399 ), ExtResource( 382 ), ExtResource( 403 ) ],
+"loop": true,
+"name": "move_0_1_0_1_0_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 380 ), ExtResource( 406 ), ExtResource( 383 ), ExtResource( 404 ), ExtResource( 388 ), ExtResource( 372 ), ExtResource( 397 ), ExtResource( 384 ), ExtResource( 398 ), ExtResource( 389 ) ],
+"loop": true,
+"name": "move_0_1_0_1_0_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 374 ), ExtResource( 385 ), ExtResource( 376 ), ExtResource( 375 ), ExtResource( 395 ), ExtResource( 390 ), ExtResource( 377 ), ExtResource( 386 ), ExtResource( 396 ), ExtResource( 379 ) ],
+"loop": true,
+"name": "move_0_1_0_1_1_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 400 ), ExtResource( 392 ), ExtResource( 401 ), ExtResource( 387 ), ExtResource( 336 ), ExtResource( 313 ), ExtResource( 330 ), ExtResource( 324 ), ExtResource( 334 ), ExtResource( 306 ) ],
+"loop": true,
+"name": "move_0_1_1_0_0_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 312 ), ExtResource( 331 ), ExtResource( 307 ), ExtResource( 309 ), ExtResource( 318 ), ExtResource( 314 ), ExtResource( 310 ), ExtResource( 332 ), ExtResource( 335 ), ExtResource( 315 ) ],
+"loop": true,
+"name": "move_0_1_1_0_1_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 325 ), ExtResource( 305 ), ExtResource( 311 ), ExtResource( 316 ), ExtResource( 317 ), ExtResource( 319 ), ExtResource( 303 ), ExtResource( 322 ), ExtResource( 333 ), ExtResource( 326 ) ],
+"loop": true,
+"name": "move_0_1_1_1_0_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 320 ), ExtResource( 321 ), ExtResource( 323 ), ExtResource( 302 ), ExtResource( 327 ), ExtResource( 328 ), ExtResource( 329 ), ExtResource( 304 ), ExtResource( 308 ), ExtResource( 199 ) ],
+"loop": true,
+"name": "move_0_1_1_1_0_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 173 ), ExtResource( 195 ), ExtResource( 200 ), ExtResource( 177 ), ExtResource( 209 ), ExtResource( 212 ), ExtResource( 210 ), ExtResource( 178 ), ExtResource( 214 ), ExtResource( 188 ) ],
+"loop": true,
+"name": "move_0_1_1_1_1_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 175 ), ExtResource( 201 ), ExtResource( 211 ), ExtResource( 196 ), ExtResource( 187 ), ExtResource( 191 ), ExtResource( 213 ), ExtResource( 192 ), ExtResource( 204 ), ExtResource( 193 ) ],
+"loop": true,
+"name": "move_0_1_1_1_1_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 77 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 81 ), ExtResource( 85 ), ExtResource( 80 ), ExtResource( 79 ) ],
+"loop": true,
+"name": "move_1_0_0_0_0_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 189 ), ExtResource( 183 ), ExtResource( 225 ), ExtResource( 220 ), ExtResource( 190 ), ExtResource( 179 ), ExtResource( 176 ), ExtResource( 197 ), ExtResource( 194 ), ExtResource( 202 ) ],
+"loop": true,
+"name": "move_1_0_0_0_0_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 198 ), ExtResource( 215 ), ExtResource( 203 ), ExtResource( 205 ), ExtResource( 206 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 224 ), ExtResource( 216 ), ExtResource( 217 ) ],
+"loop": true,
+"name": "move_1_0_0_0_1_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 174 ), ExtResource( 218 ), ExtResource( 219 ), ExtResource( 221 ), ExtResource( 222 ), ExtResource( 223 ), ExtResource( 182 ), ExtResource( 172 ), ExtResource( 180 ), ExtResource( 181 ) ],
+"loop": true,
+"name": "move_1_0_0_0_1_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 184 ), ExtResource( 185 ), ExtResource( 186 ), ExtResource( 229 ), ExtResource( 227 ), ExtResource( 231 ), ExtResource( 226 ), ExtResource( 228 ), ExtResource( 230 ), ExtResource( 506 ) ],
+"loop": true,
+"name": "move_1_0_0_1_0_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 484 ), ExtResource( 491 ), ExtResource( 521 ), ExtResource( 500 ), ExtResource( 472 ), ExtResource( 481 ), ExtResource( 482 ), ExtResource( 507 ), ExtResource( 511 ), ExtResource( 522 ) ],
+"loop": true,
+"name": "move_1_0_1_0_0_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 501 ), ExtResource( 510 ), ExtResource( 502 ), ExtResource( 505 ), ExtResource( 474 ), ExtResource( 471 ), ExtResource( 503 ), ExtResource( 483 ), ExtResource( 512 ), ExtResource( 478 ) ],
+"loop": true,
+"name": "move_1_0_1_0_1_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 473 ), ExtResource( 492 ), ExtResource( 517 ), ExtResource( 477 ), ExtResource( 485 ), ExtResource( 475 ), ExtResource( 488 ), ExtResource( 523 ), ExtResource( 480 ), ExtResource( 476 ) ],
+"loop": true,
+"name": "move_1_0_1_0_1_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 508 ), ExtResource( 479 ), ExtResource( 496 ), ExtResource( 519 ), ExtResource( 504 ), ExtResource( 513 ), ExtResource( 516 ), ExtResource( 509 ), ExtResource( 498 ), ExtResource( 486 ) ],
+"loop": true,
+"name": "move_1_0_1_1_1_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 539 ), ExtResource( 538 ), ExtResource( 86 ), ExtResource( 93 ), ExtResource( 89 ), ExtResource( 94 ), ExtResource( 88 ), ExtResource( 91 ), ExtResource( 90 ), ExtResource( 92 ) ],
 "loop": true,
 "name": "move_1_1_0_0_0_0",
 "speed": 11.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 56 ), ExtResource( 59 ), ExtResource( 58 ), ExtResource( 57 ), ExtResource( 60 ) ],
+"frames": [ ExtResource( 487 ), ExtResource( 524 ), ExtResource( 518 ), ExtResource( 494 ), ExtResource( 493 ), ExtResource( 489 ), ExtResource( 514 ), ExtResource( 515 ), ExtResource( 520 ), ExtResource( 490 ) ],
 "loop": true,
-"name": "move_1_1_1_1_1",
+"name": "move_1_1_0_0_0_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 548 ), ExtResource( 549 ), ExtResource( 547 ), ExtResource( 546 ), ExtResource( 545 ), ExtResource( 542 ), ExtResource( 544 ), ExtResource( 541 ), ExtResource( 550 ), ExtResource( 543 ) ],
+"loop": true,
+"name": "move_1_1_0_0_1_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 495 ), ExtResource( 497 ), ExtResource( 499 ), ExtResource( 531 ), ExtResource( 532 ), ExtResource( 530 ), ExtResource( 537 ), ExtResource( 525 ), ExtResource( 533 ), ExtResource( 529 ) ],
+"loop": true,
+"name": "move_1_1_0_1_0_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 534 ), ExtResource( 527 ), ExtResource( 526 ), ExtResource( 528 ), ExtResource( 535 ), ExtResource( 536 ), ExtResource( 441 ), ExtResource( 423 ), ExtResource( 422 ), ExtResource( 470 ) ],
+"loop": true,
+"name": "move_1_1_0_1_1_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 469 ), ExtResource( 436 ), ExtResource( 418 ), ExtResource( 465 ), ExtResource( 444 ), ExtResource( 407 ), ExtResource( 462 ), ExtResource( 421 ), ExtResource( 447 ), ExtResource( 468 ) ],
+"loop": true,
+"name": "move_1_1_1_0_0_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 416 ), ExtResource( 413 ), ExtResource( 463 ), ExtResource( 420 ), ExtResource( 467 ), ExtResource( 409 ), ExtResource( 408 ), ExtResource( 437 ), ExtResource( 466 ), ExtResource( 419 ) ],
+"loop": true,
+"name": "move_1_1_1_0_1_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 452 ), ExtResource( 439 ), ExtResource( 432 ), ExtResource( 425 ), ExtResource( 449 ), ExtResource( 424 ), ExtResource( 429 ), ExtResource( 430 ), ExtResource( 445 ), ExtResource( 448 ) ],
+"loop": true,
+"name": "move_1_1_1_0_1_1",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 410 ), ExtResource( 446 ), ExtResource( 450 ), ExtResource( 411 ), ExtResource( 428 ), ExtResource( 426 ), ExtResource( 440 ), ExtResource( 451 ), ExtResource( 417 ), ExtResource( 461 ) ],
+"loop": true,
+"name": "move_1_1_1_1_0_0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 464 ), ExtResource( 427 ), ExtResource( 431 ), ExtResource( 455 ), ExtResource( 433 ), ExtResource( 412 ), ExtResource( 414 ), ExtResource( 456 ), ExtResource( 434 ), ExtResource( 453 ) ],
+"loop": true,
+"name": "move_1_1_1_1_0_1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 442 ), ExtResource( 454 ), ExtResource( 435 ), ExtResource( 459 ), ExtResource( 457 ), ExtResource( 443 ), ExtResource( 415 ), ExtResource( 438 ), ExtResource( 458 ), ExtResource( 460 ) ],
+"loop": true,
+"name": "move_1_1_1_1_1_0",
+"speed": 11.0
+}, {
+"frames": [ ExtResource( 56 ), ExtResource( 59 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 57 ), ExtResource( 7 ), ExtResource( 1 ), ExtResource( 10 ), ExtResource( 60 ), ExtResource( 58 ) ],
+"loop": true,
+"name": "move_1_1_1_1_1_1",
 "speed": 11.0
 } ]
 
@@ -380,7 +1217,7 @@ tracks/2/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 11, 11 )
+extents = Vector2( 7, 7 )
 
 [sub_resource type="Animation" id=13]
 length = 0.001
@@ -1073,7 +1910,7 @@ position = Vector2( 667, 477 )
 scale = Vector2( 0.159231, 0.159231 )
 z_index = 4
 frames = SubResource( 1 )
-animation = "idle_1_0_1_1_0_1"
+animation = "idle_1_1_0_0_1_1"
 offset = Vector2( 0, -740 )
 script = ExtResource( 15 )
 speed = 300
@@ -1217,6 +2054,7 @@ z_index = 4
 z_as_relative = false
 
 [node name="Interaction_Environment_1" type="Area2D" parent="."]
+visible = false
 position = Vector2( -276, -26 )
 z_index = 2
 script = ExtResource( 11 )

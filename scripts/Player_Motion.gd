@@ -32,12 +32,12 @@ var margin = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	has_sweaty_panties = true
-	has_glasses = true
-	has_pants = true
-	has_shirt = true
-	has_tshirt = true
-	has_shoes = true
+#	has_sweaty_panties = true
+#	has_glasses = true
+#	has_pants = true
+#	has_shirt = true
+#	has_tshirt = true
+#	has_shoes = true
 	change_state(KSTATE.IDLE)
 	destination = position
 	is_climbing = false

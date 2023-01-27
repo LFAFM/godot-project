@@ -1,4 +1,4 @@
-[gd_scene load_steps=590 format=2]
+[gd_scene load_steps=611 format=2]
 
 [ext_resource path="res://player/walk_anims/move_1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00006.png" type="Texture" id=1]
 [ext_resource path="res://player/walk_anims/move_1_1_1_1_1_1/walk_hero_1_1_1_1_1_1_00002.png" type="Texture" id=2]
@@ -550,6 +550,27 @@
 [ext_resource path="res://player/walk_anims/move_1_1_0_0_1_1/walk_hero_1_1_0_0_1_1_00000.png" type="Texture" id=548]
 [ext_resource path="res://player/walk_anims/move_1_1_0_0_1_1/walk_hero_1_1_0_0_1_1_00001.png" type="Texture" id=549]
 [ext_resource path="res://player/walk_anims/move_1_1_0_0_1_1/walk_hero_1_1_0_0_1_1_00008.png" type="Texture" id=550]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00004.png" type="Texture" id=551]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00008.png" type="Texture" id=552]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00001.png" type="Texture" id=553]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00002.png" type="Texture" id=554]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00007.png" type="Texture" id=555]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00000.png" type="Texture" id=556]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00003.png" type="Texture" id=557]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00005.png" type="Texture" id=558]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00006.png" type="Texture" id=559]
+[ext_resource path="res://player/walk_anims/move_1_1_1_0_0_1/walk_hero_0_1_1_0_0_0_00009.png" type="Texture" id=560]
+[ext_resource path="res://player/idle/idle_1_1_1_0_1_1/idle_hero_1_1_1_0_1_1.png" type="Texture" id=561]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_0/walk_hero_0_0_0_1_1_0_00007.png" type="Texture" id=562]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_0/walk_hero_0_0_0_1_1_0_00002.png" type="Texture" id=563]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_0/walk_hero_0_0_0_1_1_0_00004.png" type="Texture" id=564]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_0/walk_hero_0_0_0_1_1_0_00005.png" type="Texture" id=565]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_0/walk_hero_0_0_0_1_1_0_00003.png" type="Texture" id=566]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_0/walk_hero_0_0_0_1_1_0_00006.png" type="Texture" id=567]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_0/walk_hero_0_0_0_1_1_0_00000.png" type="Texture" id=568]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_0/walk_hero_0_0_0_1_1_0_00009.png" type="Texture" id=569]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_0/walk_hero_0_0_0_1_1_0_00008.png" type="Texture" id=570]
+[ext_resource path="res://player/walk_anims/move_0_0_0_1_1_0/walk_hero_0_0_0_1_1_0_00001.png" type="Texture" id=571]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -783,6 +804,11 @@ animations = [ {
 "name": "idle_1_1_1_0_0_1",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 561 ) ],
+"loop": true,
+"name": "idle_1_1_1_0_1_1",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 99 ) ],
 "loop": true,
 "name": "idle_1_1_1_1_0_1",
@@ -837,6 +863,11 @@ animations = [ {
 "loop": true,
 "name": "move_0_0_0_1_0_1",
 "speed": 11.0
+}, {
+"frames": [ ExtResource( 568 ), ExtResource( 571 ), ExtResource( 563 ), ExtResource( 566 ), ExtResource( 564 ), ExtResource( 565 ), ExtResource( 567 ), ExtResource( 562 ), ExtResource( 570 ), ExtResource( 569 ) ],
+"loop": true,
+"name": "move_0_0_0_1_1_0",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 349 ), ExtResource( 366 ), ExtResource( 346 ), ExtResource( 354 ), ExtResource( 337 ), ExtResource( 344 ), ExtResource( 367 ), ExtResource( 369 ), ExtResource( 351 ), ExtResource( 355 ) ],
 "loop": true,
@@ -1002,6 +1033,11 @@ animations = [ {
 "loop": true,
 "name": "move_1_1_1_0_0_0",
 "speed": 11.0
+}, {
+"frames": [ ExtResource( 556 ), ExtResource( 553 ), ExtResource( 554 ), ExtResource( 557 ), ExtResource( 551 ), ExtResource( 558 ), ExtResource( 559 ), ExtResource( 555 ), ExtResource( 552 ), ExtResource( 560 ) ],
+"loop": true,
+"name": "move_1_1_1_0_0_1",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 416 ), ExtResource( 413 ), ExtResource( 463 ), ExtResource( 420 ), ExtResource( 467 ), ExtResource( 409 ), ExtResource( 408 ), ExtResource( 437 ), ExtResource( 466 ), ExtResource( 419 ) ],
 "loop": true,
@@ -1910,7 +1946,7 @@ position = Vector2( 667, 477 )
 scale = Vector2( 0.159231, 0.159231 )
 z_index = 4
 frames = SubResource( 1 )
-animation = "idle_1_1_0_0_1_1"
+animation = "move_0_0_0_1_1_0"
 offset = Vector2( 0, -740 )
 script = ExtResource( 15 )
 speed = 300
@@ -2054,7 +2090,6 @@ z_index = 4
 z_as_relative = false
 
 [node name="Interaction_Environment_1" type="Area2D" parent="."]
-visible = false
 position = Vector2( -276, -26 )
 z_index = 2
 script = ExtResource( 11 )
